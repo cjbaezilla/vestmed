@@ -1,0 +1,164 @@
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Catalogo - Vestmed Vestuario M&eacute;dico</title>
+<link href="css/layout.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/mootools-1.2.1-core-yc.js"></script>
+<script type="text/javascript" src="js/mootools-1.2-more.js"></script>
+<script type="text/javascript" src="dropdown/js/dropdown.js"> </script>
+<link rel="stylesheet" type="text/css" media="screen" href="dropdown/css/uvumi-dropdown.css" />
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" media="screen" href="dropdown/css/uvumi-dropdown-ie.css" />
+<![endif]-->
+<script type="text/javascript"> 
+new UvumiDropdown('dropdown-scliente');
+</script>
+<LINK href="Include/estilos.css" type=text/css rel=stylesheet>
+<script language="JavaScript" src="Include/SoloNumeros.js"></script>
+<script language="JavaScript" src="Include/ValidarDataInput.js"></script>
+<script language="JavaScript" src="Include/fngenerales.js"></script>
+<script language="JavaScript" src="Include/validarRut.js"></script>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+</head>
+<body>
+<div id="body">
+	<div id="header"></div>
+    <div class="menu" id="menu-noselect">
+    	<a id="home" href="index.htm">home</a>
+    	<a id="empresa" href="empresa.htm">empresa</a>
+        <a id="marcas" href="marcas.htm">marcas</a>
+        <a id="telas" href="telas.htm">telas</a>
+        <a id="bordados" href="bordados.htm">bordados</a>
+        <a id="despachos" href="despachos.htm">despachos</a>
+        <a id="clientes" href="clientes.htm">clientes</a>
+        <div id="servicio-cliente-selected" style="z-index:1000;padding-top:0px;" class="selected">
+        <ul id="dropdown-scliente" class="dropdown">
+                <li>
+                    <a class="normal" href="servicio-cliente.htm">servicio al cliente</a>
+                    <ul>
+                       <li>
+                            <a href="faq.htm">Faq</a>
+                        </li>
+                        <li>
+                            <a href="como-tomar-medidas.htm">C&oacute;mo Tomar Medidas</a>
+                        </li>
+                        <li>
+                            <a href="despachos.htm">Despachos</a>
+                        </li>
+                        <li>
+                            <a href="clean-care.htm">Clean & Care</a>
+                        </li>
+                        <li>
+                            <a href="tracking-ordenes.htm">Tracking de &Oacute;rdenes</a>
+                        </li>
+                        <li>
+                            <a href="como-cotizar.htm">C&oacute;mo Cotizar</a>
+                        </li>
+                       
+                        <li>
+                            <a href="politicas-privacidad.htm">Pol&iacute;ticas de Privacidad</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>		
+        </div>
+        <a id="catalogo" href="catalogo.php">catalogo</a>
+        <a id="contacto" href="contacto.htm">contacto</a>
+  
+  	</div>
+		    <ul id="usuario_registro">
+		<form ID="F1" AUTOCOMPLETE="off" method="POST" name="F1">
+<li class="back-verde" style="float:left;"><div id="alerta_error" style="visibility: hidden;"></div></li>
+<input type="hidden" name="dfrut" id="dfrut" />
+<li class="back-verde" style="float:left;">RUT</li>
+<li class="back-verde inputp" style="float:left;"><input type="" name="rut" id="rut" onblur="rutBlur('rut','dfrut')" onKeyPress="javascript:return soloRUT(event)" tabIndex="1"></li>
+<li class="back-verde" style="float:left;">CONTRASE&Ntilde;A</li>
+<li class="back-verde inputp" style="float:left;"><input type="password" id="dfclave" name="dfclave" tabIndex="2" readOnly /></li>
+<li class="back-verde" style="float:left;"><a href="javascript:ValidarLogin()">ENTRAR</a></li>
+<li class="back-verde registro"><a href="registrarse.php">REGISTRARSE</a></li>
+<li class="olvido" ><a href="javascript:EnviarClave()">OLVID&Oacute; SU CLAVE?</a></li>
+</form>
+    </ul>
+	 
+	    <div id="work">
+			                  <div id="back-avisos">
+                    <img src="images/registro/recuperar.png" class="titulo-principal-avisos" />
+                    <div class="titulo-avisos">Para obtener su clave debe indicar lo siguiente:</div>
+                    <ul id="olvido-pass">
+						<form ID="F2" AUTOCOMPLETE="off" method="POST" name="F2" ACTION="enviarclave.php" onsubmit="return checkRut(this)">
+							<table align="center" border="0" width="750">
+								<tr>
+									<td align="left" width="50%" valign="top">
+										1&nbsp;&nbsp;&nbsp;&nbsp;Tipo de Cliente
+									</td>
+									<td align="left" width="50%" valign="top">
+										2&nbsp;&nbsp;&nbsp;&nbsp;Rut
+									</td>
+								</tr>
+								
+								<tr>
+									<td align="left" valign="top">
+										<div style="float:left; width:145px; padding-left:35px">Institucional&nbsp;</div><input style="float:left;" type="radio" value="1" name="rbTipoClt" onclick="displayLabel(this)" />
+									</td>
+									<td align="left" valign="top">
+										<div id="parte1">
+										<span style="float:left; margin-right:10px; width:125px; padding-left:35px">Usuario</span>
+										<INPUT name="dfRutUsrIn" id="dfRutUsrIn" size="12" maxLength="12" onblur="formatearRut('dfRutUsrIn','dfRutUsr')" onKeyPress="javascript:return soloRUT(event)" class="txt-input" />
+										</div>
+									</td>
+								</tr>
+								
+								<tr>
+									<td align="left" valign="top">
+										<div style="float:left; width:145px; padding-left:35px">Usuario&nbsp;</div><input style="float:left;" type="radio" value="2" name="rbTipoClt" onclick="displayLabel(this)" />
+									</td>
+									<td align="left" valign="top">
+										<div id="parte2">
+										<span style="float:left; margin-right:10px; width:125px; padding-left:35px">Instituci&oacute;n</span><INPUT name="dfRutCltUsrIn" id="dfRutCltUsrIn" size="12" maxLength="12" onblur="formatearRut('dfRutCltUsrIn','dfRutClt')" onKeyPress="javascript:return soloRUT(event)" class="txt-input" />
+										</div>
+									</td>
+								</tr>
+								<tr><td style="padding-top: 100px">
+									<input type="hidden" name="dfRutClt" id="dfRutClt">
+									<input type="hidden" name="dfRutUsr" id="dfRutUsr">&nbsp;
+								</td><td style="padding-left: 300px; padding-top: 100px; text-align: right">
+									<input type="submit" id="av-btn-enviar" value="" />
+								</td></tr>
+							</table>
+						</form>
+                    </ul>
+				</div>
+				<script language="javascript">
+					usuario = document.getElementById("parte1");
+					institucion = document.getElementById("parte2");
+					
+					institucion.style.visibility = "hidden";
+					usuario.style.visibility = "hidden";
+					
+					function displayLabel(obj) {
+						if (obj.value == "1") {
+							institucion.style.visibility = "visible";
+							usuario.style.visibility = "visible";
+						}
+						else {
+							institucion.style.visibility = "hidden";
+							usuario.style.visibility = "visible";
+						}
+					}
+				</script>
+				
+			      </div>
+	<div id="footer"></div>
+</div>
+<script language="javascript"> 
+	var f1;	
+	var f2;
+	
+	f1 = document.F1;	
+	f2 = document.F2;
+</script>
+</body>
+</html>
+

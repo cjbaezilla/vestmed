@@ -1,0 +1,15 @@
+Referencia: http://www.thedanglybits.com/2006/10/13/update-send-email-with-php-and-gmail-hosted-for-your-domain/
+
+Para usar con phpgmailer.zip
+
+
+require_once('/phpgmailer/class.phpgmailer.php');
+$mail = new PHPGMailer();
+$mail->Username = 'user@domain.com';
+$mail->Password = 'password';
+$mail->From = 'user@domain.com';
+$mail->FromName = 'User Name';
+$mail->Subject = 'Subject';
+$mail->AddAddress('myfriend@domain.com');
+$mail->Body = 'Hey buddy, here's an email!';
+$mail->Send();

@@ -1,0 +1,82 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="shortcut icon" type="image/ico" href="http://www.datatables.net/media/images/favicon.ico" />
+
+        <title>DataTables example</title>
+        <style type="text/css" title="currentStyle">
+                @import "DataTables-1.9.4/media/css/demo_page.css";
+                @import "DataTables-1.9.4/media/css/demo_table.css";
+        </style>
+        <script type="text/javascript" language="javascript" src="DataTables-1.9.4/media/js/jquery.js"></script>
+        <script type="text/javascript" language="javascript" src="DataTables-1.9.4/media/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            var oTable;
+            
+            $(document).ready(function() {
+                    $('#example').dataTable( {
+                            "sScrollY": "310px",
+                            "bPaginate": false,
+                            "bScrollCollapse": true,
+                            "bJQueryUI": true,
+                            "bFilter": false,
+                            "bSort": false,
+                            "bRetrieve": true,
+                            "bProcessing": true,
+                            "sAjaxSource": "http://localhost/vestmedmvc/index.php/busqueda/Filtro_Ajax2/Landau/A"
+                    } );
+
+                    $("form#prueba").submit(function(){
+                        $.post('http://localhost/vestmedmvc/index.php/busqueda/Filtro_Ajax2/Landau/B',
+                               function(output_string) {
+                                      var oTable = $('#example').dataTable();
+                                      
+                                      oTable.fnClearTable();
+                                      
+                                      var resultado = JSON.parse(output_string);
+                                      
+                                      var arr = eval(resultado.aaData); /*  */
+                                      
+                                      $('#example').dataTable().fnAddData(arr);
+                               });
+                        return false;
+                    });
+ 
+            } );
+
+            function repoblar() {
+                $("form#prueba").submit();
+            }
+        </script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <table cellpadding="0" cellspacing="0" border="0" class="display" id="example">
+            <thead>
+                <tr>
+                    <th width="15%">Marca</th>
+                    <th width="15%">Style</th>
+                    <th width="10%">Color</th>
+                    <th width="10%">FVS</th>
+                    <th width="10%">FVSP</th>
+                    <th width="15%">Unidades<br/>Vendidas</th>
+                    <th width="10%">Stock</th>
+                    <th width="15%">Stock<br/>Proyectado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="8" class="dataTables_empty">Loading data from server</td>
+                </tr>
+            </tbody>
+        </table>
+        <form method="POST" id="prueba" name="prueba">
+            <input type="button" onclick="repoblar()" value="repoblar" />
+        </form>
+    </body>
+</html>

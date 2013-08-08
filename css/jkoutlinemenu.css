@@ -1,0 +1,42 @@
+.outlinemenu{
+position: absolute; /*leave this alone*/
+display: none; /*leave this alone*/
+width: 180px; /*default width of menu*/
+border: 1px solid black;
+overflow-x: hidden;
+}
+
+.outlinemenu ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+.outlinemenu ul li a{
+background:#01ffff;
+font: bold 13px "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, sans-serif;
+color:#023A3B;
+display: block;
+width: auto;
+padding: 3px 0;
+padding-left: 5px;
+text-decoration: none;
+border:1px solid #444;
+border-top:0;
+height:20px;
+border-bottom: 1px solid #B5B5B5;
+}
+
+.outlinemenu ul li a:visited, .outlinemenu ul li a:active{
+color: #00014e;
+}
+
+.outlinemenu ul li a:hover{
+color: black;
+background: #ffffcb;
+}
+
+/* Holly Hack for IE \*/
+* html .outlinemenu li {height: 1%; }
+* html .outlinemenu li a { height: 1%; }
+/* End */

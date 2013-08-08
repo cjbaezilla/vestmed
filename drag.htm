@@ -1,0 +1,52 @@
+<html>
+<head>
+	<style>
+		.lista {
+			background-color:red;
+			height: 100px;
+		}
+	</style>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script>
+		$(document).ready(function(){
+		    $(".item").draggable({helper: 'clone'});
+			$(".lista").droppable({ 		
+					accept: ".item",               
+					drop: function(ev, ui) {                                   
+						// Añado el objeto origen a la lista destino 
+						//$(this).append($(ui.draggable));  
+						alert('objeto se dropeo en esta DIV');
+					}
+				});						
+		});
+		
+		$("#botonResultado").click(function () { 
+			 var salida = "";
+			 $('.lista li').each(function () {
+			   salida += $(this).parent().attr('id') + " : " + $(this).html() + "\n";
+			 });
+							 
+			alert(salida);
+		});
+			
+	</script>
+
+</head> 
+<body>
+   
+<ul class="lista" id="listaOrigen">
+    <li class="item">item 1</li>
+    <li class="item">item 2</li>
+    <li class="item">item 3</li>
+</ul>
+ 
+ 
+<ul class="lista" id="listaDestino">
+</ul>
+ 
+ <input type="button" id="botonResultado" value="ver datos">
+ 
+</body>
+</html>

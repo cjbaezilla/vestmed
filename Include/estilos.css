@@ -1,0 +1,765 @@
+INPUT.button2
+{
+    BORDER-RIGHT: #999999 1px outset;
+    BORDER-TOP: #999999 1px outset;
+    BACKGROUND-IMAGE: url(/images/buttonbg2.gif);
+    FONT: bold 11px 'trebuchet ms', helvetica, sans-serif;
+    BORDER-LEFT: #999999 1px outset;
+    COLOR: #000000;
+    BORDER-BOTTOM: #999999 1px outset;
+    BACKGROUND-REPEAT: repeat-x;
+    BACKGROUND-COLOR: #d4d4d4
+}
+INPUT.textfield
+{
+    BORDER-RIGHT: #999999 1px outset;
+    BORDER-TOP: #999999 1px outset;
+    BACKGROUND-IMAGE: url(/images/buttonbg.gif);
+    FONT: bold 11px 'trebuchet ms', helvetica, sans-serif;
+    BORDER-LEFT: #999999 1px outset;
+    COLOR: #000000;
+    BORDER-BOTTOM: #999999 1px outset;
+    BACKGROUND-REPEAT: repeat-x;
+    BACKGROUND-COLOR: lightgoldenrodyellow
+}
+INPUT.cb
+{
+    BORDER-RIGHT: #999999 1px outset;
+    BORDER-TOP: #999999 1px outset;
+    FONT: bold 9px 'trebuchet ms', helvetica, sans-serif;
+    BORDER-LEFT: #999999 1px outset;
+    COLOR: #000000;
+    BORDER-BOTTOM: #999999 1px outset;
+    BACKGROUND-REPEAT: repeat-x;
+    BACKGROUND-COLOR: lightgoldenrodyellow
+}
+INPUT.textfieldRO
+{
+    BORDER-RIGHT: #999999 1px outset;
+    BORDER-TOP: #999999 1px outset;
+    BACKGROUND-IMAGE: url(/images/buttonbg.gif);
+    FONT: bold 11px 'trebuchet ms', helvetica, sans-serif;
+    BORDER-LEFT: #999999 1px outset;
+    COLOR: #000000;
+    BORDER-BOTTOM: #999999 1px outset;
+    BACKGROUND-REPEAT: repeat-x;
+    BACKGROUND-COLOR: cyan
+}
+INPUT.textfieldRO2
+{
+    BORDER-RIGHT: #999999 1px outset;
+    BORDER-TOP: #999999 1px outset;
+    BACKGROUND-IMAGE: url(/images/buttonbg.gif);
+    FONT: 10px Verdana, Arial;
+    BORDER-LEFT: #999999 1px outset;
+    COLOR: #000000;
+    BORDER-BOTTOM: #999999 1px outset;
+    BACKGROUND-REPEAT: repeat-x;
+    BACKGROUND-COLOR: #f2f2f2
+}
+INPUT.textfieldRO22
+{
+    BORDER-RIGHT: #999999 1px outset;
+    BORDER-TOP: #999999 1px outset;
+    BACKGROUND-IMAGE: url(/images/buttonbg.gif);
+    FONT: 10px Verdana, Arial;
+    BORDER-LEFT: #999999 1px outset;
+    COLOR: #000000;
+    BORDER-BOTTOM: #999999 1px outset;
+    BACKGROUND-REPEAT: repeat-x;
+    BACKGROUND-COLOR: peachpuff
+}
+INPUT.textfieldRO3
+{
+    BORDER-RIGHT: NONE;
+    BORDER-TOP: NONE;
+    BACKGROUND-IMAGE: url(/images/buttonbg.gif);
+    FONT: 10px Verdana, Arial;
+    BORDER-LEFT: NONE;
+    COLOR: #000000;
+    BORDER-BOTTOM: NONE;
+    BACKGROUND-REPEAT: repeat-x;
+    BACKGROUND-COLOR: #f2f2f2
+}
+TEXTAREA.textfield
+{
+    BORDER-RIGHT: #999999 1px outset;
+    BORDER-TOP: #999999 1px outset;
+    BACKGROUND-IMAGE: url(/images/buttonbg.gif);
+    FONT: bold 11px 'trebuchet ms', helvetica, sans-serif;
+    BORDER-LEFT: #999999 1px outset;
+    COLOR: #000000;
+    BORDER-BOTTOM: #999999 1px outset;
+    BACKGROUND-REPEAT: repeat-x;
+    BACKGROUND-COLOR: lightgoldenrodyellow
+}
+.textfield
+{
+    BORDER-RIGHT: #999999 1px outset;
+    BORDER-TOP: #999999 1px outset;
+    BACKGROUND-IMAGE: url(/images/buttonbg.gif);
+    FONT: bold 11px 'trebuchet ms', helvetica, sans-serif;
+    BORDER-LEFT: #999999 1px outset;
+    COLOR: #000000;
+    BORDER-BOTTOM: #999999 1px outset;
+    BACKGROUND-REPEAT: repeat-x;
+    BACKGROUND-COLOR: lightgoldenrodyellow
+}
+.copyright
+{
+    BORDER-TOP: #e4e4e4 1px solid;
+    MARGIN-TOP: 5px;
+    WIDTH: 100%;
+    COLOR: #3366cc;
+    PADDING-TOP: 10px;
+    TEXT-DECORATION: none
+}
+.def
+{
+    FONT-WEIGHT: bold;
+    CURSOR: hand;
+    COLOR: magenta
+}
+.piedepagina
+{
+    BORDER-TOP: #e4e4e4 1px solid;
+    MARGIN-TOP: 1px;
+    FONT-SIZE: 9px;
+    WIDTH: 100%;
+    COLOR: black;
+    PADDING-TOP: 1px;
+    FONT-FAMILY: verdana;
+    TEXT-DECORATION: none
+}
+.normal
+{
+    FONT-SIZE: 11px;
+    COLOR: #747474;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-ALIGN: justify
+}
+.opcion
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #003366;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-ALIGN: center
+}
+.opciones
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: white;
+    FONT-FAMILY: Verdana, Arial, Helvetica;
+    TEXT-DECORATION: none
+}
+.titopc
+{
+    FONT-SIZE: 1.2em;
+    COLOR: white;
+    FONT-FAMILY: tahoma;
+    TEXT-DECORATION: none
+}
+.opcsel
+{
+    FONT-SIZE: 1em;
+    COLOR: black;
+    FONT-FAMILY: tahoma;
+    TEXT-DECORATION: none
+}
+.opcnosel
+{
+    FONT-SIZE: 1em;
+    COLOR: black;
+    FONT-FAMILY: tahoma;
+    TEXT-DECORATION: none
+}
+.label
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica;
+    TEXT-DECORATION: none
+}
+.label_left_right
+{
+    BORDER-RIGHT: goldenrod 1px solid;
+    FONT-SIZE: 10px;
+    BORDER-LEFT: goldenrod 1px solid;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: center
+}
+.label_left_right_top
+{
+    BORDER-RIGHT: goldenrod 1px solid;
+    BORDER-TOP: goldenrod 1px solid;
+    FONT-SIZE: 10px;
+    BORDER-LEFT: goldenrod 1px solid;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: left
+}
+.label_left_right_bottom
+{
+    BORDER-RIGHT: goldenrod 1px solid;
+    FONT-SIZE: 10px;
+    BORDER-LEFT: goldenrod 1px solid;
+    COLOR: black;
+    BORDER-BOTTOM: goldenrod 1px solid;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: center
+}
+.label_left
+{
+    FONT-SIZE: 10px;
+    BORDER-LEFT: goldenrod 1px solid;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: left
+}
+.label_left_bottom
+{
+    FONT-SIZE: 10px;
+    BORDER-LEFT: goldenrod 1px solid;
+    COLOR: black;
+    BORDER-BOTTOM: goldenrod 1px solid;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: left
+}
+.label_left_top
+{
+    BORDER-TOP: goldenrod 1px solid;
+    FONT-SIZE: 10px;
+    BORDER-LEFT: goldenrod 1px solid;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: right
+}
+.label_right
+{
+    BORDER-RIGHT: goldenrod 1px solid;
+    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: right
+}
+.label_right_bottom
+{
+    BORDER-RIGHT: goldenrod 1px solid;
+    FONT-SIZE: 10px;
+    COLOR: black;
+    BORDER-BOTTOM: goldenrod 1px solid;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: right
+}
+.label_right_top
+{
+    BORDER-RIGHT: goldenrod 1px solid;
+    BORDER-TOP: goldenrod 1px solid;
+    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: left
+}
+.label_top
+{
+/*    BORDER-TOP: goldenrod 1px solid;
+*/    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: center
+}
+.label_bottom
+{
+    FONT-SIZE: 10px;
+    COLOR: black;
+    BORDER-BOTTOM: goldenrod 1px solid;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: center
+}
+.label_top_bottom
+{
+    BORDER-TOP: goldenrod 1px solid;
+    FONT-SIZE: 10px;
+    COLOR: black;
+    BORDER-BOTTOM: goldenrod 1px solid;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: center
+}
+.label_left_right_top_bottom
+{
+    BORDER-RIGHT: goldenrod 1px solid;
+    BORDER-TOP: goldenrod 1px solid;
+    FONT-SIZE: 10px;
+    BORDER-LEFT: goldenrod 1px solid;
+    COLOR: black;
+    BORDER-BOTTOM: goldenrod 1px solid;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: center;
+}
+.aviso
+{
+    FONT-SIZE: 9px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-ALIGN: justify
+}
+.dato
+{
+    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: left
+}
+.dato5p
+{
+    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: left;
+	PADDING-LEFT: 5px
+}
+.dato10p
+{
+    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: left;
+	PADDING-LEFT: 25px
+}
+.dato5p12s
+{
+    FONT-SIZE: 12px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: left;
+	PADDING-LEFT: 5px
+}
+.dator
+{
+    FONT-SIZE: 10px;
+    color:#6abfbf;
+    FONT-FAMILY: Verdana, Arial;
+	float:right;
+}
+.datob
+{
+    FONT-SIZE: 12px;
+    COLOR: blue;
+    FONT-FAMILY: Verdana, Arial
+}
+.datoc
+{
+    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: center
+}
+.dato3
+{
+    BORDER-RIGHT: goldenrod 1px solid;
+    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: left
+}
+.dato33
+{
+    BORDER-RIGHT: goldenrod 1px solid;
+    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: peachpuff;
+    TEXT-ALIGN: left
+}
+.dato4
+{
+    BORDER-RIGHT: goldenrod 1px solid;
+    FONT-SIZE: 10px;
+    COLOR: black;
+    BORDER-BOTTOM: goldenrod 1px solid;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: left
+}
+.dato44
+{
+    BORDER-RIGHT: goldenrod 1px solid;
+    FONT-SIZE: 10px;
+    COLOR: black;
+    BORDER-BOTTOM: goldenrod 1px solid;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: peachpuff;
+    TEXT-ALIGN: left
+}
+.dato5
+{
+    BORDER-RIGHT: goldenrod 1px solid;
+    BORDER-TOP: goldenrod 1px solid;
+    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: left
+}
+.label2
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica;
+    TEXT-DECORATION: none;
+    TEXT-ALIGN: left;
+}
+.label22
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica;
+    TEXT-DECORATION: none;
+    TEXT-ALIGN: center;
+}
+.label3
+{
+    FONT-SIZE: 10px;
+    BORDER-LEFT: goldenrod 1px solid;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: right
+}
+.label33
+{
+    FONT-SIZE: 10px;
+    BORDER-LEFT: goldenrod 1px solid;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: peachpuff;
+    TEXT-ALIGN: right
+}
+.label333
+{
+    BORDER-RIGHT: goldenrod 1px solid;
+    FONT-SIZE: 10px;
+    BORDER-LEFT: goldenrod 1px solid;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: peachpuff;
+    TEXT-ALIGN: right
+}
+.label4
+{
+    FONT-SIZE: 10px;
+    BORDER-LEFT: goldenrod 1px solid;
+    COLOR: black;
+    BORDER-BOTTOM: goldenrod 1px solid;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: right
+}
+.label44
+{
+    FONT-SIZE: 10px;
+    BORDER-LEFT: goldenrod 1px solid;
+    COLOR: black;
+    BORDER-BOTTOM: goldenrod 1px solid;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: peachpuff;
+    TEXT-ALIGN: right
+}
+.label5
+{
+    BORDER-TOP: goldenrod 1px solid;
+    FONT-SIZE: 10px;
+    BORDER-LEFT: goldenrod 1px solid;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: right
+}
+.titulo
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 10px;
+    COLOR: white;
+    FONT-FAMILY: Verdana, Arial, Helvetica;
+    TEXT-ALIGN: center;
+    TEXT-DECORATION: none
+}
+.encabezado1
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Verdana, Arial
+}
+.fecha
+{
+    BORDER-TOP: #e4e4e4 1px solid;
+    MARGIN-TOP: 1px;
+    FONT-SIZE: 9px;
+    WIDTH: 100%;
+    COLOR: black;
+    PADDING-TOP: 1px;
+    FONT-FAMILY: verdana;
+    TEXT-DECORATION: none
+}
+.avisopie
+{
+    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: Arial, Verdana;
+    TEXT-ALIGN: justify
+}
+.datoj
+{
+    PADDING-RIGHT: 5px;
+    FONT-SIZE: 10px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: justify
+}
+.contrato
+{
+    PADDING-RIGHT: 5px;
+    FONT-SIZE: 11px;
+    COLOR: #003366;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-ALIGN: justify
+}
+.bienvenida
+{
+    PADDING-RIGHT: 5px;
+    FONT-SIZE: 1.6em;
+    MARGIN-LEFT: 0px;
+    COLOR: midnightblue;
+    TEXT-INDENT: 0px;
+    MARGIN-RIGHT: 0px;
+    FONT-FAMILY: Arial, Verdana;
+    TEXT-ALIGN: justify
+}
+.tit_usuario
+{
+    FONT-SIZE: 0.9em;
+    COLOR: midnightblue;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    TEXT-ALIGN: right
+}
+.titulo_tabla
+{
+    BORDER-RIGHT: #023131 1px solid;
+    BORDER-TOP: #023131 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 3px;
+    BORDER-LEFT: #023131 1px solid;
+    COLOR: white;
+    PADDING-TOP: 3px;
+    BORDER-BOTTOM: #023131 1px solid;
+    FONT-FAMILY: Arial, Verdana;
+    BACKGROUND-COLOR: #023131;
+    TEXT-ALIGN: center
+}
+.titulo_tabla5p
+{
+    BORDER-RIGHT: #023131 1px solid;
+    BORDER-TOP: #023131 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    BORDER-LEFT: #023131 1px solid;
+    COLOR: white;
+    PADDING-LEFT: 3px;
+    BORDER-BOTTOM: #023131 1px solid;
+    FONT-FAMILY: Arial, Verdana;
+    BACKGROUND-COLOR: #023131;
+    TEXT-ALIGN: left
+}
+.subtitulo_tabla
+{
+    BORDER-RIGHT: #023131 1px solid;
+    BORDER-TOP: #023131 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 3px;
+    COLOR: black;
+    PADDING-TOP: 3px;
+    BORDER-BOTTOM: #023131 1px solid;
+    FONT-FAMILY: Arial, Verdana;
+    BACKGROUND-COLOR: #023131;
+    TEXT-ALIGN: center
+}
+.subtitulo_tabla_left
+{
+    BORDER-RIGHT: #023131 1px solid;
+    BORDER-TOP: #023131 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    PADDING-BOTTOM: 3px;
+    BORDER-LEFT: #023131 1px solid;
+    COLOR: black;
+    PADDING-TOP: 3px;
+    BORDER-BOTTOM: #023131 1px solid;
+    FONT-FAMILY: Arial, Verdana;
+    BACKGROUND-COLOR: #023131;
+    TEXT-ALIGN: center
+}
+.fila_subtitulo
+{
+    BORDER-RIGHT: #023131 1px solid;
+    PADDING-BOTTOM: 1px;
+    BORDER-LEFT: #023131 1px solid;
+    PADDING-TOP: 1px
+}
+.titulo1
+{
+    MARGIN-TOP: 5px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    MARGIN-BOTTOM: 5px;
+    PADDING-BOTTOM: 5px;
+    WIDTH: 100%;
+    COLOR: white;
+    PADDING-TOP: 5px;
+    FONT-FAMILY: helvetica, sans-serif;
+    BACKGROUND-COLOR: #993300;
+    TEXT-ALIGN: center
+}
+.error_clave
+{
+    BORDER-RIGHT: goldenrod 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    BORDER-LEFT: goldenrod 1px solid;
+    COLOR: blue;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: center
+}
+.linkblanco
+{
+    COLOR: white
+}
+.titulo_mail
+{
+    FONT-SIZE: 20px;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial, Helvetica
+}
+INPUT.textfieldv
+{
+    BORDER-RIGHT: #999999 1px outset;
+    BORDER-TOP: #999999 1px outset;
+    BACKGROUND-IMAGE: url(../images/contacto/back-input.png);
+    FONT: bold 11px 'trebuchet ms', helvetica, sans-serif;
+    BORDER-LEFT: #999999 1px outset;
+    COLOR: #000000;
+    BORDER-BOTTOM: #999999 1px outset;
+    BACKGROUND-COLOR: lightgoldenrodyellow
+}
+input.textfieldv2
+{
+    BACKGROUND: url(../images/registro/back-input2.png) no-repeat;
+    FONT: bold 11px 'trebuchet ms', helvetica, sans-serif;
+    COLOR: #104545;
+	width:178px;
+	height:18px;
+	border:0;
+	padding:1px 10px 0 10px;
+}
+a{
+	font-size:11px;
+	COLOR: #104545;
+	text-decoration:none;
+	font-weight:bold;
+}
+a:hover{
+	text-decoration:underline;
+}
+.textfield_m
+{
+    BACKGROUND: #fff;
+    FONT: bold 11px 'trebuchet ms', helvetica, sans-serif;
+    COLOR: #104545;
+	font-size:10px;
+	font-weight:bold;
+	border:1px solid #104545;
+}
+textarea.textfieldv2
+{
+    BACKGROUND: #fff;
+    FONT: bold 11px 'trebuchet ms', helvetica, sans-serif;
+    COLOR: #104545;
+	border:2px solid #104545;
+}
+select.textfieldv2, select.textfieldv{
+	BACKGROUND: url(../images/registro/back-input2.png) no-repeat;
+    FONT: bold 11px 'trebuchet ms', helvetica, sans-serif;
+    COLOR: #104545;
+	width:205px;
+	height:19px;
+	border:0;
+	padding:1px 10px 0 10px;
+	-moz-border-radius-bottomleft:10px;
+	-moz-border-radius-bottomright:10px;
+	-moz-border-radius-topleft:10px;
+	-moz-border-radius-topright:10px;
+}
+.textfieldv2 option{
+	background:#FFF;
+	color:#104545;
+}
+INPUT.textfieldb
+{
+    BORDER-RIGHT: #999999 1px outset;
+    BORDER-TOP: #999999 1px outset;
+    BACKGROUND-IMAGE: url(/images/buttonbg.gif);
+    FONT: 1.0em 'trebuchet ms', helvetica, sans-serif;
+    BORDER-LEFT: #999999 1px outset;
+    COLOR: #000000;
+    BORDER-BOTTOM: #999999 1px outset;
+    BACKGROUND-COLOR: lightgoldenrodyellow
+}
+.labelBig
+{
+    PADDING-RIGHT: 5px;
+    FONT-SIZE: 1.0em;
+    MARGIN-LEFT: 0px;
+    COLOR: #023131;
+    TEXT-INDENT: 0px;
+    MARGIN-RIGHT: 0px;
+    FONT-FAMILY: Arial, Verdana;
+    TEXT-ALIGN: justify
+}
+.titulo_Bordado1
+{
+    FONT-SIZE: 16px;
+    COLOR: blue;
+    FONT-WEIGHT: bold;
+    FONT-FAMILY: Verdana, Arial, Helvetica
+}
+.titulo_Bordado2
+{
+    FONT-SIZE: 16px;
+    COLOR: green;
+    FONT-WEIGHT: bold;
+    FONT-FAMILY: Verdana, Arial, Helvetica
+}
+.titulo_error
+{
+    FONT-SIZE: 14px;
+    COLOR: red;
+    FONT-WEIGHT: bold;
+    FONT-FAMILY: Verdana, Arial, Helvetica
+}
+.titulo_Condiciones
+{
+    FONT-SIZE: 12px;
+    COLOR: black;
+    FONT-WEIGHT: bold;
+    FONT-FAMILY: Verdana, Arial, Helvetica
+}
+#lista-detallecot{
+	/*border:1px solid #000000;*/
+	height:100%; 
+	left:6px;
+	position:absolute;
+	top:228px;
+	width:862px;
+}

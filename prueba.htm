@@ -1,0 +1,5028 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Ventas</title>
+        
+	<link href="http://code.jquery.com/ui/1.9.0/themes/redmond/jquery-ui.css" rel="stylesheet" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.min.js"></script>
+	<style type="text/css" title="currentStyle">
+			@import "DataTables-1.9.4/media/css/demo_table.css";
+			@import "DataTables-1.9.4/media/css/jquery.dataTables_themeroller.css";
+			@import "DataTables-1.9.4/media/css/TableTools.css";
+			@import "DataTables-1.9.4/examples/examples_support/themes/smoothness/jquery-ui-1.8.4.custom.css";
+	</style>
+	<script type="text/javascript" language="javascript" src="DataTables-1.9.4/media/js/jquery.dataTables.js"></script>  
+	<!--script type="text/javascript" language="javascript" src="DataTables-1.9.4/media/js/ZeroClipboard.js"></script-->
+	<!--script type="text/javascript" language="javascript" src="DataTables-1.9.4/media/js/TableTools.js"></script-->
+
+        <script>
+            function InicializaTabla(tabla, scrollY) {
+                $( '#' + tabla ).dataTable({ 
+                    "aoColumnDefs": [
+                        { "bSortable": false, "aTargets": [ 2, 3 ] },
+                        { "sClass": "centro", "aTargets": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ] }
+                    ],
+                    "oLanguage": {      
+                        "oPaginate": {        
+                            "sFirst": "Primera",
+                            "sNext": "Siguiente",
+                            "sPrevious": "Anterior",
+                            "sLast": "Ultima"
+                        },
+                        "sInfo": "Registros: _TOTAL_. Viendo del _START_ al _END_",
+                        "sEmptyTable": "No existen registros a mostrar",
+                        "sSearch": "Filtro de Busqueda:",
+                        "sLengthMenu": "Mostrando _MENU_ registros por página",
+                        "sInfoFiltered": "(filtrados desde _MAX_ registros)"
+                    },
+                    "sScrollY": scrollY,
+                    "sScrollX": "100%",
+                    "sScrollXInner": "110%",
+                    "bScrollCollapse": true,
+                    "bPaginate": false,
+                    "bJQueryUI": true,
+                    "bFilter": false,
+                    "bSort": true
+                });     
+            }
+                        
+            $(function() {
+                InicializaTabla('tblOrdenes', 440);        
+                oTable2 = $('#tblOrdenes').dataTable();
+            });
+
+        </script>
+        
+    </head>
+    <body>
+
+<table width="100%" align="center" id="tblOrdenes" class="display">
+    <thead>
+        <tr>
+            <th align="center">Ciclo</th>
+            <th align="center">Sistema</th>
+            <th align="center">Nota Venta</th>
+            <th align="center">Cliente</th>
+            <th align="center">Fecha<br />Creaci&oacute;n</th>
+            <th align="center">Fecha<br />T&eacute;rmino</th>
+            <th align="center">Status</th>
+            <th align="center">Acciones</th>
+            <th align="center">Service<br />level</th>
+            <th align="center">nv<br/>Qty</th>
+            <th align="center">Picking<br/>Qty</th>
+            <th align="center">Picking<br/>%</th>
+            <th align="center">Despacho<br/>Qty</th>
+            <th align="center">Despacho<br/>%</th>
+            <th align="center">Factura<br/>Qty</th>
+            <th align="center">Factura<br/>%</th>
+            <th align="center">&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000005</td>
+           <td>Ilustre Municipalida/69071800</td>
+           <td>12/01/2012</td>
+           <td>31/01/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>344</td>
+           <td>344</td>
+           <td>100.00</td>
+           <td>344</td>
+           <td>100.00</td>
+           <td>344</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000006</td>
+           <td>HOSPITAL CLINICO DEL/76057904</td>
+           <td>12/01/2012</td>
+           <td>25/01/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>270</td>
+           <td>270</td>
+           <td>100.00</td>
+           <td>270</td>
+           <td>100.00</td>
+           <td>270</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000008</td>
+           <td>FUNDACION DE SALUD E/70905700</td>
+           <td>12/01/2012</td>
+           <td>09/02/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>518</td>
+           <td>518</td>
+           <td>100.00</td>
+           <td>518</td>
+           <td>100.00</td>
+           <td>518</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000010</td>
+           <td>Ilustre Municipalida/69071800</td>
+           <td>13/01/2012</td>
+           <td>31/01/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>36</td>
+           <td>36</td>
+           <td>100.00</td>
+           <td>36</td>
+           <td>100.00</td>
+           <td>36</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000011</td>
+           <td>Clinica Hospital del/53125850</td>
+           <td>13/01/2012</td>
+           <td>07/02/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>162</td>
+           <td>162</td>
+           <td>100.00</td>
+           <td>162</td>
+           <td>100.00</td>
+           <td>162</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000014</td>
+           <td>INSTITUTO NACIONAL D/99583690-4</td>
+           <td>17/01/2012</td>
+           <td>23/01/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>46</td>
+           <td>46</td>
+           <td>100.00</td>
+           <td>46</td>
+           <td>100.00</td>
+           <td>46</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000015</td>
+           <td>OFTALMOLOGICA PUERTO/78804660-3</td>
+           <td>18/01/2012</td>
+           <td>26/01/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>62</td>
+           <td>62</td>
+           <td>100.00</td>
+           <td>62</td>
+           <td>100.00</td>
+           <td>62</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000016</td>
+           <td>CLINICA ALEMANA DE S/96770100-9</td>
+           <td>18/01/2012</td>
+           <td>02/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>936</td>
+           <td>936</td>
+           <td>100.00</td>
+           <td>936</td>
+           <td>100.00</td>
+           <td>936</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000017</td>
+           <td>FUNDACION DE SALUD E/70905700</td>
+           <td>19/01/2012</td>
+           <td>09/02/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>51</td>
+           <td>51</td>
+           <td>100.00</td>
+           <td>51</td>
+           <td>100.00</td>
+           <td>51</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000021</td>
+           <td>CLINICA VALPARAISO  /99568720</td>
+           <td>20/01/2012</td>
+           <td>31/01/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>60</td>
+           <td>60</td>
+           <td>100.00</td>
+           <td>60</td>
+           <td>100.00</td>
+           <td>60</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000022</td>
+           <td>CLINICA VALPARAISO  /99568720</td>
+           <td>20/01/2012</td>
+           <td>17/02/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>56</td>
+           <td>56</td>
+           <td>100.00</td>
+           <td>56</td>
+           <td>100.00</td>
+           <td>56</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000023</td>
+           <td>Ilustre Municipalida/69071800</td>
+           <td>23/01/2012</td>
+           <td>31/01/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000026</td>
+           <td>OFTALMOLOGICA PUERTO/78804660-3</td>
+           <td>26/01/2012</td>
+           <td>26/01/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>9</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000027</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>27/01/2012</td>
+           <td>31/01/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000030</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>30/01/2012</td>
+           <td>31/01/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000031</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>30/01/2012</td>
+           <td>31/01/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>7</td>
+           <td>7</td>
+           <td>100.00</td>
+           <td>7</td>
+           <td>100.00</td>
+           <td>7</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000032</td>
+           <td>SYNTHES CHILE SPA/76109357</td>
+           <td>01/02/2012</td>
+           <td>07/02/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000033</td>
+           <td>CLINICA PUERTO MONTT/76444740</td>
+           <td>01/02/2012</td>
+           <td>07/02/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>15</td>
+           <td>15</td>
+           <td>100.00</td>
+           <td>15</td>
+           <td>100.00</td>
+           <td>15</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000034</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>02/02/2012</td>
+           <td>29/02/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000035</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>03/02/2012</td>
+           <td>23/02/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>4</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000035</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>03/02/2012</td>
+           <td>23/02/2012</td>
+           <td>REVISAR PICKING</td>
+           <td>REVISAR CANTIDADES PICKEADAS</td>
+           <td>rojo</td>
+           <td>128</td>
+           <td>434</td>
+           <td>339.10</td>
+           <td>128</td>
+           <td>100.00</td>
+           <td>128</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000036</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>03/02/2012</td>
+           <td>23/02/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>12</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000037</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>07/02/2012</td>
+           <td>26/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000038</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>07/02/2012</td>
+           <td>26/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>22</td>
+           <td>22</td>
+           <td>100.00</td>
+           <td>22</td>
+           <td>100.00</td>
+           <td>22</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000039</td>
+           <td>CLINICA ALEMANA DE T/96606750</td>
+           <td>08/02/2012</td>
+           <td>11/02/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000040</td>
+           <td>CLINICA ALEMANA DE T/96606750</td>
+           <td>10/02/2012</td>
+           <td>20/02/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>12</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000041</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>10/02/2012</td>
+           <td>23/02/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000043</td>
+           <td>SAINI DEL OTERO LTDA/79691490</td>
+           <td>10/02/2012</td>
+           <td>10/02/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>25</td>
+           <td>25</td>
+           <td>100.00</td>
+           <td>25</td>
+           <td>100.00</td>
+           <td>25</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000045</td>
+           <td>CLINICA ALEMANA DE T/96606750</td>
+           <td>14/02/2012</td>
+           <td>20/02/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000046</td>
+           <td>SIND.DE TRAB. N?1 CO/71808200</td>
+           <td>20/02/2012</td>
+           <td>20/02/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>16</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000048</td>
+           <td>INSTITUTO NACIONAL D/99583690-4</td>
+           <td>21/02/2012</td>
+           <td>28/02/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>21</td>
+           <td>21</td>
+           <td>100.00</td>
+           <td>21</td>
+           <td>100.00</td>
+           <td>21</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000049</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>21/02/2012</td>
+           <td>23/02/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000051</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>23/02/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000053</td>
+           <td>INSTITUTO NACIONAL D/99583690-4</td>
+           <td>23/02/2012</td>
+           <td>28/02/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>4</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000054</td>
+           <td>FUNDACION DE SALUD E/70905700</td>
+           <td>25/02/2012</td>
+           <td>19/03/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>76</td>
+           <td>76</td>
+           <td>100.00</td>
+           <td>76</td>
+           <td>100.00</td>
+           <td>76</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000055</td>
+           <td>CLINICA LOS COIHUES/96921660</td>
+           <td>25/02/2012</td>
+           <td>03/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>592</td>
+           <td>592</td>
+           <td>100.00</td>
+           <td>592</td>
+           <td>100.00</td>
+           <td>592</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000056</td>
+           <td>CLINICA ALEMANA DE T/96606750</td>
+           <td>28/02/2012</td>
+           <td>07/03/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>12</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000057</td>
+           <td>JOHNSON Y JOHNSON DE/93745000</td>
+           <td>01/03/2012</td>
+           <td>07/03/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>18</td>
+           <td>18</td>
+           <td>100.00</td>
+           <td>18</td>
+           <td>100.00</td>
+           <td>18</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000058</td>
+           <td>IMPORTADORA MIWI S.A/76607320</td>
+           <td>01/03/2012</td>
+           <td>06/03/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000059</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>01/03/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000060</td>
+           <td>IMPORTADORA MIWI S.A/76607320</td>
+           <td>01/03/2012</td>
+           <td>06/03/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>15</td>
+           <td>15</td>
+           <td>100.00</td>
+           <td>15</td>
+           <td>100.00</td>
+           <td>15</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000061</td>
+           <td>CLINICA ALEMANA DE T/96606750</td>
+           <td>02/03/2012</td>
+           <td>13/03/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>4</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000061</td>
+           <td>CLINICA ALEMANA DE T/96606750</td>
+           <td>02/03/2012</td>
+           <td>13/03/2012</td>
+           <td>REVISAR PICKING</td>
+           <td>REVISAR CANTIDADES PICKEADAS</td>
+           <td>rojo</td>
+           <td>8</td>
+           <td>16</td>
+           <td>200.00</td>
+           <td>8</td>
+           <td>100.00</td>
+           <td>8</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000062</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>06/03/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000063</td>
+           <td>CENTRO MEDICO MILITA/61974000</td>
+           <td>06/03/2012</td>
+           <td>06/03/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>26</td>
+           <td>26</td>
+           <td>100.00</td>
+           <td>26</td>
+           <td>100.00</td>
+           <td>26</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000064</td>
+           <td>INSTITUTO DE SALUD P/61605000-1</td>
+           <td>06/03/2012</td>
+           <td>19/03/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>4</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000065</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>07/03/2012</td>
+           <td>26/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000066</td>
+           <td>INSTITUTO DE SALUD P/61605000-1</td>
+           <td>07/03/2012</td>
+           <td>19/03/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>4</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000067</td>
+           <td>JOHNSON Y JOHNSON DE/93745000</td>
+           <td>08/03/2012</td>
+           <td>14/03/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>27</td>
+           <td>27</td>
+           <td>100.00</td>
+           <td>27</td>
+           <td>100.00</td>
+           <td>27</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000068</td>
+           <td>Coorporaci?n Municip/70872300</td>
+           <td>09/03/2012</td>
+           <td>09/03/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>31</td>
+           <td>31</td>
+           <td>100.00</td>
+           <td>31</td>
+           <td>100.00</td>
+           <td>31</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000070</td>
+           <td>SYNTHES CHILE SPA/76109357</td>
+           <td>14/03/2012</td>
+           <td>20/03/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>9</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000071</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>14/03/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000073</td>
+           <td>CLINICA DE ESP. Y LA/86948000</td>
+           <td>19/03/2012</td>
+           <td>10/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>27</td>
+           <td>27</td>
+           <td>100.00</td>
+           <td>27</td>
+           <td>100.00</td>
+           <td>27</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000074</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>21/03/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000075</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>21/03/2012</td>
+           <td>26/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>12</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000076</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>21/03/2012</td>
+           <td>31/03/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000077</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>21/03/2012</td>
+           <td>31/03/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000078</td>
+           <td>CLINICA VALPARAISO  /99568720</td>
+           <td>21/03/2012</td>
+           <td>21/03/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>10</td>
+           <td>10</td>
+           <td>100.00</td>
+           <td>10</td>
+           <td>100.00</td>
+           <td>10</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000080</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>21/03/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000081</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>22/03/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000082</td>
+           <td>SYNTHES CHILE SPA/76109357</td>
+           <td>22/03/2012</td>
+           <td>26/03/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000083</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>26/03/2012</td>
+           <td>26/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000084</td>
+           <td>SYNTHES CHILE SPA/76109357</td>
+           <td>27/03/2012</td>
+           <td>28/03/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000085</td>
+           <td>CLINICA ALEMANA DE T/96606750</td>
+           <td>27/03/2012</td>
+           <td>29/03/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000087</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>28/03/2012</td>
+           <td>26/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>4</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000088</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>28/03/2012</td>
+           <td>31/03/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000089</td>
+           <td>FUNDACION DE SALUD E/70905700</td>
+           <td>28/03/2012</td>
+           <td>04/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>34</td>
+           <td>34</td>
+           <td>100.00</td>
+           <td>34</td>
+           <td>100.00</td>
+           <td>34</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000090</td>
+           <td>CLINICA DE ESP. Y LA/86948000</td>
+           <td>29/03/2012</td>
+           <td>10/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>48</td>
+           <td>48</td>
+           <td>100.00</td>
+           <td>48</td>
+           <td>100.00</td>
+           <td>48</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000091</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>04/04/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000092</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>04/04/2012</td>
+           <td>09/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000094</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>05/04/2012</td>
+           <td>30/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000095</td>
+           <td>CENTRO DE ESP. MEDIC/76064682</td>
+           <td>09/04/2012</td>
+           <td>30/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>81</td>
+           <td>81</td>
+           <td>100.00</td>
+           <td>81</td>
+           <td>100.00</td>
+           <td>81</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000096</td>
+           <td>CLINICA RIO BLANCO/99573600</td>
+           <td>09/04/2012</td>
+           <td>30/04/2012</td>
+           <td>REVISAR PICKING</td>
+           <td>PICKEAR PRODUCTOS PENDIENTES</td>
+           <td>rojo</td>
+           <td>36</td>
+           <td>18</td>
+           <td>50.00</td>
+           <td>18</td>
+           <td>50.00</td>
+           <td>18</td>
+           <td>50.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000097</td>
+           <td>CLINICA RIO BLANCO/99573600</td>
+           <td>09/04/2012</td>
+           <td>30/04/2012</td>
+           <td>REVISAR PICKING</td>
+           <td>FALTAN 4.00 PRODUCTOS EN STOCK</td>
+           <td>rojo</td>
+           <td>4</td>
+           <td>2</td>
+           <td>50.00</td>
+           <td>2</td>
+           <td>50.00</td>
+           <td>2</td>
+           <td>50.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000097</td>
+           <td>CLINICA RIO BLANCO/99573600</td>
+           <td>09/04/2012</td>
+           <td>30/04/2012</td>
+           <td>REVISAR PICKING</td>
+           <td>PICKEAR PRODUCTOS PENDIENTES</td>
+           <td>rojo</td>
+           <td>8</td>
+           <td>4</td>
+           <td>50.00</td>
+           <td>4</td>
+           <td>50.00</td>
+           <td>4</td>
+           <td>50.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000098</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>09/04/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000099</td>
+           <td>CENTRO DE REHAB. INF/65419910</td>
+           <td>10/04/2012</td>
+           <td>10/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>28</td>
+           <td>28</td>
+           <td>100.00</td>
+           <td>28</td>
+           <td>100.00</td>
+           <td>28</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000100</td>
+           <td>CENTRO DE REHAB. INF/65419910</td>
+           <td>10/04/2012</td>
+           <td>10/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>1</td>
+           <td>1</td>
+           <td>100.00</td>
+           <td>1</td>
+           <td>100.00</td>
+           <td>1</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000101</td>
+           <td>UNIVERSIDAD AUTRAL D/81380500</td>
+           <td>11/04/2012</td>
+           <td>11/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>4</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000102</td>
+           <td>CLINICA PUERTO MONTT/76444740</td>
+           <td>11/04/2012</td>
+           <td>19/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>33</td>
+           <td>33</td>
+           <td>100.00</td>
+           <td>33</td>
+           <td>100.00</td>
+           <td>33</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000103</td>
+           <td>INSTITUTO NACIONAL D/99583690-4</td>
+           <td>11/04/2012</td>
+           <td>25/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>14</td>
+           <td>14</td>
+           <td>100.00</td>
+           <td>14</td>
+           <td>100.00</td>
+           <td>14</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000104</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>12/04/2012</td>
+           <td>30/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000106</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>16/04/2012</td>
+           <td>09/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>12</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000107</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>16/04/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000108</td>
+           <td>CLINICA ALEMANA DE V/76555870</td>
+           <td>16/04/2012</td>
+           <td>16/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>39</td>
+           <td>39</td>
+           <td>100.00</td>
+           <td>39</td>
+           <td>100.00</td>
+           <td>39</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000110</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>19/04/2012</td>
+           <td>09/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000111</td>
+           <td>CLINICA MAGALLANES/96567920</td>
+           <td>20/04/2012</td>
+           <td>20/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>16</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000112</td>
+           <td>MUNICIPALIDAD DE SN /69080500</td>
+           <td>20/04/2012</td>
+           <td>23/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>11</td>
+           <td>11</td>
+           <td>100.00</td>
+           <td>11</td>
+           <td>100.00</td>
+           <td>11</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000113</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>21/04/2012</td>
+           <td>30/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000115</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>23/04/2012</td>
+           <td>30/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000116</td>
+           <td>SERVICIO DE COMUNICA/96862290</td>
+           <td>24/04/2012</td>
+           <td>24/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>189</td>
+           <td>189</td>
+           <td>100.00</td>
+           <td>189</td>
+           <td>100.00</td>
+           <td>189</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000117</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>24/04/2012</td>
+           <td>30/04/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000118</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>26/04/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000119</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>26/04/2012</td>
+           <td>09/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000120</td>
+           <td>ESCUELA DE CABALLERI/61101024</td>
+           <td>30/04/2012</td>
+           <td>08/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>13</td>
+           <td>13</td>
+           <td>100.00</td>
+           <td>13</td>
+           <td>100.00</td>
+           <td>13</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000122</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>02/05/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000123</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>02/05/2012</td>
+           <td>09/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000126</td>
+           <td>CENTRO DE DIAGNOSTIC/78500300</td>
+           <td>03/05/2012</td>
+           <td>04/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>39</td>
+           <td>39</td>
+           <td>100.00</td>
+           <td>39</td>
+           <td>100.00</td>
+           <td>39</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000127</td>
+           <td>CENTRO CHILENO DE OS/79798750</td>
+           <td>04/05/2012</td>
+           <td>04/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>24</td>
+           <td>24</td>
+           <td>100.00</td>
+           <td>24</td>
+           <td>100.00</td>
+           <td>24</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000128</td>
+           <td>CLAUDIO AZOCAR CACER/11946984</td>
+           <td>04/05/2012</td>
+           <td>04/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000129</td>
+           <td>SERCLAN S.A./76130902</td>
+           <td>04/05/2012</td>
+           <td>04/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>15</td>
+           <td>15</td>
+           <td>100.00</td>
+           <td>15</td>
+           <td>100.00</td>
+           <td>15</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000130</td>
+           <td>ESP. ODONTOLOGICAS M/77769130</td>
+           <td>04/05/2012</td>
+           <td>10/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>181</td>
+           <td>181</td>
+           <td>100.00</td>
+           <td>181</td>
+           <td>100.00</td>
+           <td>181</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000131</td>
+           <td>CLINICA VALPARAISO  /99568720</td>
+           <td>09/05/2012</td>
+           <td>08/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>8</td>
+           <td>8</td>
+           <td>100.00</td>
+           <td>8</td>
+           <td>100.00</td>
+           <td>8</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000132</td>
+           <td>FUNDACION DE SALUD E/70905700</td>
+           <td>09/05/2012</td>
+           <td>17/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>7</td>
+           <td>7</td>
+           <td>100.00</td>
+           <td>7</td>
+           <td>100.00</td>
+           <td>7</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000133</td>
+           <td>SERVICIO DE COMUNICA/96862290</td>
+           <td>09/05/2012</td>
+           <td>09/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000134</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>09/05/2012</td>
+           <td>09/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000135</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>09/05/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000136</td>
+           <td>INTEGRAMEDICA CENTRO/76398000</td>
+           <td>10/05/2012</td>
+           <td>22/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>27</td>
+           <td>27</td>
+           <td>100.00</td>
+           <td>27</td>
+           <td>100.00</td>
+           <td>27</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000137</td>
+           <td>SOCIEDAD MATUS Y ROS/78640410</td>
+           <td>12/05/2012</td>
+           <td>22/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>57</td>
+           <td>57</td>
+           <td>100.00</td>
+           <td>57</td>
+           <td>100.00</td>
+           <td>57</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000138</td>
+           <td>CLINICA ALEMANA DE V/76555870</td>
+           <td>14/05/2012</td>
+           <td>28/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>360</td>
+           <td>360</td>
+           <td>100.00</td>
+           <td>360</td>
+           <td>100.00</td>
+           <td>360</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000139</td>
+           <td>CLINICA REGIONAL DEL/99533790</td>
+           <td>14/05/2012</td>
+           <td>14/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>4</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000140</td>
+           <td>INSTITUTO DE SALUD P/61605000-1</td>
+           <td>14/05/2012</td>
+           <td>14/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>4</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000141</td>
+           <td>INSTITUTO DE SALUD P/61605000-1</td>
+           <td>14/05/2012</td>
+           <td>14/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000142</td>
+           <td>INSTITUTO DE SALUD P/61605000-1</td>
+           <td>14/05/2012</td>
+           <td>14/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>5</td>
+           <td>5</td>
+           <td>100.00</td>
+           <td>5</td>
+           <td>100.00</td>
+           <td>5</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000143</td>
+           <td>INSTITUTO DE SALUD P/61605000-1</td>
+           <td>14/05/2012</td>
+           <td>14/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>16</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000144</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>15/05/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000145</td>
+           <td>IMPORTADORA MIWI S.A/76607320</td>
+           <td>15/05/2012</td>
+           <td>22/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>9</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000146</td>
+           <td>Clinica Hospital del/53125850</td>
+           <td>16/05/2012</td>
+           <td>16/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>18</td>
+           <td>18</td>
+           <td>100.00</td>
+           <td>18</td>
+           <td>100.00</td>
+           <td>18</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000147</td>
+           <td>CLINICA ALEMANA DE V/76555870</td>
+           <td>18/05/2012</td>
+           <td>28/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>168</td>
+           <td>168</td>
+           <td>100.00</td>
+           <td>168</td>
+           <td>100.00</td>
+           <td>168</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000148</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>18/05/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000149</td>
+           <td>SOCIEDAD MATUS Y ROS/78640410</td>
+           <td>22/05/2012</td>
+           <td>22/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>27</td>
+           <td>27</td>
+           <td>100.00</td>
+           <td>27</td>
+           <td>100.00</td>
+           <td>27</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000150</td>
+           <td>INSTITUTO NACIONAL D/99583690-4</td>
+           <td>22/05/2012</td>
+           <td>22/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>12</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000151</td>
+           <td>VIDA CELL S.A./99578600</td>
+           <td>23/05/2012</td>
+           <td>28/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>12</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000152</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>24/05/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000153</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>26/05/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000154</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>29/05/2012</td>
+           <td>09/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>18</td>
+           <td>18</td>
+           <td>100.00</td>
+           <td>18</td>
+           <td>100.00</td>
+           <td>18</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000155</td>
+           <td>FUNDACION DE SALUD E/70905700</td>
+           <td>29/05/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>18</td>
+           <td>18</td>
+           <td>100.00</td>
+           <td>18</td>
+           <td>100.00</td>
+           <td>18</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000156</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>29/05/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000157</td>
+           <td>FUNDACION DE SALUD E/70905700</td>
+           <td>29/05/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000158</td>
+           <td>SERVICIO DE COMUNICA/96862290</td>
+           <td>30/05/2012</td>
+           <td>30/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>1</td>
+           <td>1</td>
+           <td>100.00</td>
+           <td>1</td>
+           <td>100.00</td>
+           <td>1</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000159</td>
+           <td>INSTITUTO NACIONAL D/99583690-4</td>
+           <td>30/05/2012</td>
+           <td>15/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>22</td>
+           <td>22</td>
+           <td>100.00</td>
+           <td>22</td>
+           <td>100.00</td>
+           <td>22</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000160</td>
+           <td>ESP. ODONTOLOGICAS M/77769130</td>
+           <td>31/05/2012</td>
+           <td>31/05/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>24</td>
+           <td>24</td>
+           <td>100.00</td>
+           <td>24</td>
+           <td>100.00</td>
+           <td>24</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000161</td>
+           <td>CLINICA LOS COIHUES/96921660</td>
+           <td>01/06/2012</td>
+           <td>05/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000162</td>
+           <td>ESP. ODONTOLOGICAS M/77769130</td>
+           <td>01/06/2012</td>
+           <td>19/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000163</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>01/06/2012</td>
+           <td>09/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000164</td>
+           <td>CENTRO MEDICO MILITA/61974000</td>
+           <td>04/06/2012</td>
+           <td>04/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>4</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000165</td>
+           <td>INSTITUTO NACIONAL D/99583690-4</td>
+           <td>05/06/2012</td>
+           <td>15/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>4</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000166</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>05/06/2012</td>
+           <td>09/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>15</td>
+           <td>15</td>
+           <td>100.00</td>
+           <td>15</td>
+           <td>100.00</td>
+           <td>15</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000167</td>
+           <td>TECNOLOGIA DE LA INF/76877740</td>
+           <td>05/06/2012</td>
+           <td>07/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>16</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000168</td>
+           <td>SYNTHES CHILE SPA/76109357</td>
+           <td>06/06/2012</td>
+           <td>07/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>9</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000169</td>
+           <td>CLINICA ALEMANA DE T/96606750</td>
+           <td>07/06/2012</td>
+           <td>13/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000170</td>
+           <td>CLINICA VALPARAISO  /99568720</td>
+           <td>08/06/2012</td>
+           <td>08/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>10</td>
+           <td>10</td>
+           <td>100.00</td>
+           <td>10</td>
+           <td>100.00</td>
+           <td>10</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000171</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>11/06/2012</td>
+           <td>09/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000172</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>11/06/2012</td>
+           <td>09/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000173</td>
+           <td>CLINICA ALEMANA DE V/76555870</td>
+           <td>12/06/2012</td>
+           <td>25/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>42</td>
+           <td>42</td>
+           <td>100.00</td>
+           <td>42</td>
+           <td>100.00</td>
+           <td>42</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000173</td>
+           <td>CLINICA ALEMANA DE V/76555870</td>
+           <td>12/06/2012</td>
+           <td>25/07/2012</td>
+           <td>REVISAR PICKING</td>
+           <td>REVISAR CANTIDADES PICKEADAS</td>
+           <td>rojo</td>
+           <td>918</td>
+           <td>2112</td>
+           <td>230.10</td>
+           <td>916</td>
+           <td>99.80</td>
+           <td>916</td>
+           <td>99.80</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000174</td>
+           <td>SYNTHES CHILE SPA/76109357</td>
+           <td>13/06/2012</td>
+           <td>21/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>12</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000175</td>
+           <td>ESP. ODONTOLOGICAS M/77769130</td>
+           <td>14/06/2012</td>
+           <td>19/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>8</td>
+           <td>8</td>
+           <td>100.00</td>
+           <td>8</td>
+           <td>100.00</td>
+           <td>8</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000176</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>15/06/2012</td>
+           <td>09/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>12</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000177</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>15/06/2012</td>
+           <td>09/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000178</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>18/06/2012</td>
+           <td>09/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>9</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000179</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>19/06/2012</td>
+           <td>09/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000180</td>
+           <td>UNIVERSIDAD FINIS TE/70884700</td>
+           <td>19/06/2012</td>
+           <td>27/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000181</td>
+           <td>ESP. ODONTOLOGICAS M/77769130</td>
+           <td>19/06/2012</td>
+           <td>19/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>8</td>
+           <td>8</td>
+           <td>100.00</td>
+           <td>8</td>
+           <td>100.00</td>
+           <td>8</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000183</td>
+           <td>ESP. ODONTOLOGICAS M/77769130</td>
+           <td>19/06/2012</td>
+           <td>19/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000184</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>20/06/2012</td>
+           <td>20/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>16</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000185</td>
+           <td>INSTITUTO DE SALUD P/61605000-1</td>
+           <td>21/06/2012</td>
+           <td>21/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>8</td>
+           <td>8</td>
+           <td>100.00</td>
+           <td>8</td>
+           <td>100.00</td>
+           <td>8</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000186</td>
+           <td>INSTITUTO DE SALUD P/61605000-1</td>
+           <td>21/06/2012</td>
+           <td>21/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>10</td>
+           <td>10</td>
+           <td>100.00</td>
+           <td>10</td>
+           <td>100.00</td>
+           <td>10</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000187</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>21/06/2012</td>
+           <td>09/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>12</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000188</td>
+           <td>Clinica Hospital del/53125850</td>
+           <td>22/06/2012</td>
+           <td>28/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000189</td>
+           <td>IMPORTADORA MIWI S.A/76607320</td>
+           <td>22/06/2012</td>
+           <td>29/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000190</td>
+           <td>CLINICA VALPARAISO  /99568720</td>
+           <td>22/06/2012</td>
+           <td>22/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>12</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000191</td>
+           <td>ESCUELA DE CABALLERI/61101024</td>
+           <td>25/06/2012</td>
+           <td>25/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000192</td>
+           <td>SOCIEDAD MATUS Y ROS/78640410</td>
+           <td>25/06/2012</td>
+           <td>28/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000193</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>26/06/2012</td>
+           <td>04/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>10</td>
+           <td>10</td>
+           <td>100.00</td>
+           <td>10</td>
+           <td>100.00</td>
+           <td>10</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000194</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>26/06/2012</td>
+           <td>04/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000195</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>26/06/2012</td>
+           <td>04/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000196</td>
+           <td>FUNDACION DE SALUD E/70905700</td>
+           <td>27/06/2012</td>
+           <td>29/06/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>7</td>
+           <td>7</td>
+           <td>100.00</td>
+           <td>7</td>
+           <td>100.00</td>
+           <td>7</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000197</td>
+           <td>CLINICA PUERTO MONTT/76444740</td>
+           <td>04/07/2012</td>
+           <td>12/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>21</td>
+           <td>21</td>
+           <td>100.00</td>
+           <td>21</td>
+           <td>100.00</td>
+           <td>21</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000198</td>
+           <td>FUNDACION DE SALUD E/70905700</td>
+           <td>04/07/2012</td>
+           <td>09/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>7</td>
+           <td>7</td>
+           <td>100.00</td>
+           <td>7</td>
+           <td>100.00</td>
+           <td>7</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000199</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>06/07/2012</td>
+           <td>31/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000200</td>
+           <td>CLINICA ALEMANA DE T/96606750</td>
+           <td>06/07/2012</td>
+           <td>10/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>12</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000201</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>06/07/2012</td>
+           <td>04/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000202</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>06/07/2012</td>
+           <td>04/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000203</td>
+           <td>CENTRO DE REHAB. INF/65419910</td>
+           <td>10/07/2012</td>
+           <td>10/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000204</td>
+           <td>CLINICA RIO BLANCO/99573600</td>
+           <td>11/07/2012</td>
+           <td>20/07/2012</td>
+           <td>REVISAR PICKING</td>
+           <td>PICKEAR PRODUCTOS PENDIENTES</td>
+           <td>rojo</td>
+           <td>18</td>
+           <td>9</td>
+           <td>50.00</td>
+           <td>9</td>
+           <td>50.00</td>
+           <td>9</td>
+           <td>50.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000205</td>
+           <td>CENTRO DE ESP. MEDIC/76064682</td>
+           <td>11/07/2012</td>
+           <td>20/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>7</td>
+           <td>7</td>
+           <td>100.00</td>
+           <td>7</td>
+           <td>100.00</td>
+           <td>7</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000206</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>11/07/2012</td>
+           <td>04/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>12</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000207</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>12/07/2012</td>
+           <td>04/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000208</td>
+           <td>INSTITUTO NACIONAL D/99583690-4</td>
+           <td>12/07/2012</td>
+           <td>24/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>37</td>
+           <td>37</td>
+           <td>100.00</td>
+           <td>37</td>
+           <td>100.00</td>
+           <td>37</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000209</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>13/07/2012</td>
+           <td>04/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000210</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>18/07/2012</td>
+           <td>04/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000211</td>
+           <td>FUNDACION DE SALUD E/70905700</td>
+           <td>18/07/2012</td>
+           <td>25/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>14</td>
+           <td>14</td>
+           <td>100.00</td>
+           <td>14</td>
+           <td>100.00</td>
+           <td>14</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000212</td>
+           <td>CLINICA LOS COIHUES/96921660</td>
+           <td>18/07/2012</td>
+           <td>31/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>765</td>
+           <td>765</td>
+           <td>100.00</td>
+           <td>765</td>
+           <td>100.00</td>
+           <td>765</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000213</td>
+           <td>SIND.DE TRAB. N?1 CO/71808200</td>
+           <td>18/07/2012</td>
+           <td>16/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>360</td>
+           <td>360</td>
+           <td>100.00</td>
+           <td>360</td>
+           <td>100.00</td>
+           <td>360</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000214</td>
+           <td>CLINICA RIO BLANCO/99573600</td>
+           <td>19/07/2012</td>
+           <td>20/07/2012</td>
+           <td>REVISAR PICKING</td>
+           <td>PICKEAR PRODUCTOS PENDIENTES</td>
+           <td>rojo</td>
+           <td>4</td>
+           <td>2</td>
+           <td>50.00</td>
+           <td>2</td>
+           <td>50.00</td>
+           <td>2</td>
+           <td>50.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000215</td>
+           <td>CENTRO DE IMAGENES M/77495150</td>
+           <td>20/07/2012</td>
+           <td>23/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>48</td>
+           <td>48</td>
+           <td>100.00</td>
+           <td>48</td>
+           <td>100.00</td>
+           <td>48</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000216</td>
+           <td>CENTRO DE IMAGENES M/77495150</td>
+           <td>20/07/2012</td>
+           <td>23/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>4</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000217</td>
+           <td>ESP. ODONTOLOGICAS M/77769130</td>
+           <td>23/07/2012</td>
+           <td>03/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>9</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000218</td>
+           <td>CLINICA ALEMANA DE V/76555870</td>
+           <td>24/07/2012</td>
+           <td>25/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>8</td>
+           <td>8</td>
+           <td>100.00</td>
+           <td>8</td>
+           <td>100.00</td>
+           <td>8</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000219</td>
+           <td>CLINICA ALEMANA DE V/76555870</td>
+           <td>24/07/2012</td>
+           <td>26/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>40</td>
+           <td>40</td>
+           <td>100.00</td>
+           <td>40</td>
+           <td>100.00</td>
+           <td>40</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000220</td>
+           <td>CENTRO DE ESP. MEDIC/76064682</td>
+           <td>24/07/2012</td>
+           <td>07/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>28</td>
+           <td>28</td>
+           <td>100.00</td>
+           <td>28</td>
+           <td>100.00</td>
+           <td>28</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000221</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>24/07/2012</td>
+           <td>04/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>18</td>
+           <td>18</td>
+           <td>100.00</td>
+           <td>18</td>
+           <td>100.00</td>
+           <td>18</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000222</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>24/07/2012</td>
+           <td>04/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000223</td>
+           <td>ESP. ODONTOLOGICAS M/77769130</td>
+           <td>24/07/2012</td>
+           <td>03/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>16</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000224</td>
+           <td>OFTALMOLOGICA PUERTO/76804660</td>
+           <td>24/07/2012</td>
+           <td>08/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>17</td>
+           <td>17</td>
+           <td>100.00</td>
+           <td>17</td>
+           <td>100.00</td>
+           <td>17</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000225</td>
+           <td>CLINICA LOS COIHUES/96921660</td>
+           <td>26/07/2012</td>
+           <td>31/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>240</td>
+           <td>240</td>
+           <td>100.00</td>
+           <td>240</td>
+           <td>100.00</td>
+           <td>240</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000226</td>
+           <td>INSTITUTO DE SALUD P/61605000-1</td>
+           <td>31/07/2012</td>
+           <td>31/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000227</td>
+           <td>INSTITUTO DE SALUD P/61605000-1</td>
+           <td>31/07/2012</td>
+           <td>31/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>4</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000228</td>
+           <td>INSTITUTO DE SALUD P/61605000-1</td>
+           <td>31/07/2012</td>
+           <td>31/07/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000229</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>31/07/2012</td>
+           <td>04/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000230</td>
+           <td>SERVICIOS MEDICOS TA/78053560</td>
+           <td>31/07/2012</td>
+           <td>04/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000231</td>
+           <td>CLINICA ALEMANA DE V/76555870</td>
+           <td>31/07/2012</td>
+           <td>10/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>56</td>
+           <td>56</td>
+           <td>100.00</td>
+           <td>56</td>
+           <td>100.00</td>
+           <td>56</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000232</td>
+           <td>CLINICA ALEMANA DE V/76555870</td>
+           <td>31/07/2012</td>
+           <td>10/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>32</td>
+           <td>32</td>
+           <td>100.00</td>
+           <td>32</td>
+           <td>100.00</td>
+           <td>32</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000234</td>
+           <td>SOCIEDAD DE PROFESIO/79747000</td>
+           <td>01/08/2012</td>
+           <td>02/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>29</td>
+           <td>29</td>
+           <td>100.00</td>
+           <td>29</td>
+           <td>100.00</td>
+           <td>29</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000235</td>
+           <td>JOHNSON Y JOHNSON DE/93745000</td>
+           <td>01/08/2012</td>
+           <td>06/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>24</td>
+           <td>24</td>
+           <td>100.00</td>
+           <td>24</td>
+           <td>100.00</td>
+           <td>24</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000236</td>
+           <td>CLINICA ALEMANA DE V/76555870</td>
+           <td>01/08/2012</td>
+           <td>10/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>24</td>
+           <td>24</td>
+           <td>100.00</td>
+           <td>24</td>
+           <td>100.00</td>
+           <td>24</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000237</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>02/08/2012</td>
+           <td>31/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000238</td>
+           <td>SOCIEDAD DE PROFESIO/79747000</td>
+           <td>02/08/2012</td>
+           <td>02/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000239</td>
+           <td>ESP. ODONTOLOGICAS M/77769130</td>
+           <td>02/08/2012</td>
+           <td>03/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000241</td>
+           <td>ESP. ODONTOLOGICAS M/77769130</td>
+           <td>03/08/2012</td>
+           <td>03/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000242</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>06/08/2012</td>
+           <td>06/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>9</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000245</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>07/08/2012</td>
+           <td>31/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000246</td>
+           <td>JOHNSON Y JOHNSON DE/93745000</td>
+           <td>08/08/2012</td>
+           <td>13/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000247</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>08/08/2012</td>
+           <td>31/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000248</td>
+           <td>INSTITUTO NACIONAL D/99583690-4</td>
+           <td>09/08/2012</td>
+           <td>21/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>14</td>
+           <td>14</td>
+           <td>100.00</td>
+           <td>14</td>
+           <td>100.00</td>
+           <td>14</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000249</td>
+           <td>CLINICA PUERTO MONTT/76444740</td>
+           <td>10/08/2012</td>
+           <td>21/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000250</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>13/08/2012</td>
+           <td>31/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000252</td>
+           <td>SYNTHES CHILE SPA/76109357</td>
+           <td>16/08/2012</td>
+           <td>23/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>30</td>
+           <td>30</td>
+           <td>100.00</td>
+           <td>30</td>
+           <td>100.00</td>
+           <td>30</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000254</td>
+           <td>CLINICA VALPARAISO  /99568720</td>
+           <td>17/08/2012</td>
+           <td>17/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>4</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000255</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>20/08/2012</td>
+           <td>31/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000256</td>
+           <td>CLINICA BIO BIO S.A./96885940</td>
+           <td>22/08/2012</td>
+           <td>10/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>180</td>
+           <td>180</td>
+           <td>100.00</td>
+           <td>180</td>
+           <td>100.00</td>
+           <td>180</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000256</td>
+           <td>CLINICA BIO BIO S.A./96885940</td>
+           <td>22/08/2012</td>
+           <td>10/09/2012</td>
+           <td>REVISAR PICKING</td>
+           <td>REVISAR CANTIDADES PICKEADAS</td>
+           <td>rojo</td>
+           <td>20</td>
+           <td>40</td>
+           <td>200.00</td>
+           <td>20</td>
+           <td>100.00</td>
+           <td>20</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000257</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>23/08/2012</td>
+           <td>31/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000258</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>23/08/2012</td>
+           <td>31/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000259</td>
+           <td>MULTIMEDICAL S.A./96938650</td>
+           <td>25/08/2012</td>
+           <td>04/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>42</td>
+           <td>42</td>
+           <td>100.00</td>
+           <td>42</td>
+           <td>100.00</td>
+           <td>42</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000260</td>
+           <td>MAKEUP EXPRESS/76058032</td>
+           <td>27/08/2012</td>
+           <td>27/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>15</td>
+           <td>15</td>
+           <td>100.00</td>
+           <td>15</td>
+           <td>100.00</td>
+           <td>15</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000261</td>
+           <td>CENTRAL ODONTOLOGICA/70788300</td>
+           <td>28/08/2012</td>
+           <td>28/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>15</td>
+           <td>15</td>
+           <td>100.00</td>
+           <td>15</td>
+           <td>100.00</td>
+           <td>15</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000264</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>29/08/2012</td>
+           <td>31/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>4</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000265</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>29/08/2012</td>
+           <td>31/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000266</td>
+           <td>INSTITUTO DE SALUD P/61605000-1</td>
+           <td>29/08/2012</td>
+           <td>05/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>5</td>
+           <td>5</td>
+           <td>100.00</td>
+           <td>5</td>
+           <td>100.00</td>
+           <td>5</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000267</td>
+           <td>INSTITUTO DE SALUD P/61605000-1</td>
+           <td>29/08/2012</td>
+           <td>05/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000268</td>
+           <td>UNIVERSIDAD AUTRAL D/81380500</td>
+           <td>30/08/2012</td>
+           <td>30/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>21</td>
+           <td>21</td>
+           <td>100.00</td>
+           <td>21</td>
+           <td>100.00</td>
+           <td>21</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000269</td>
+           <td>MAKEUP EXPRESS/76058032</td>
+           <td>30/08/2012</td>
+           <td>31/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>25</td>
+           <td>25</td>
+           <td>100.00</td>
+           <td>25</td>
+           <td>100.00</td>
+           <td>25</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000270</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>30/08/2012</td>
+           <td>31/08/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000274</td>
+           <td>JOHNSON Y JOHNSON DE/93745000</td>
+           <td>03/09/2012</td>
+           <td>10/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000275</td>
+           <td>CLINICA ALEMANA DE V/76555870</td>
+           <td>03/09/2012</td>
+           <td>15/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>42</td>
+           <td>42</td>
+           <td>100.00</td>
+           <td>42</td>
+           <td>100.00</td>
+           <td>42</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000276</td>
+           <td>CLINICA ALEMANA DE V/76555870</td>
+           <td>04/09/2012</td>
+           <td>15/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>118</td>
+           <td>118</td>
+           <td>100.00</td>
+           <td>118</td>
+           <td>100.00</td>
+           <td>118</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000277</td>
+           <td>MAKEUP EXPRESS/76058032</td>
+           <td>04/09/2012</td>
+           <td>05/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000278</td>
+           <td>IMPORTADORA MIWI S.A/76607320</td>
+           <td>05/09/2012</td>
+           <td>14/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>3</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td>3</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000279</td>
+           <td>CLINICA ALEMANA DE V/76555870</td>
+           <td>06/09/2012</td>
+           <td>15/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>2</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td>2</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000280</td>
+           <td>CLINICA LOS COIHUES/96921660</td>
+           <td>06/09/2012</td>
+           <td>04/10/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>452</td>
+           <td>452</td>
+           <td>100.00</td>
+           <td>452</td>
+           <td>100.00</td>
+           <td>452</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000281</td>
+           <td>HOSPITAL CLINICO DEL/76057904</td>
+           <td>06/09/2012</td>
+           <td>14/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>16</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000282</td>
+           <td>INSTITUTO NACIONAL D/99583690-4</td>
+           <td>07/09/2012</td>
+           <td>26/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>14</td>
+           <td>14</td>
+           <td>100.00</td>
+           <td>14</td>
+           <td>100.00</td>
+           <td>14</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000285</td>
+           <td>FUNDACION DE SALUD E/70905700</td>
+           <td>11/09/2012</td>
+           <td>25/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>7</td>
+           <td>7</td>
+           <td>100.00</td>
+           <td>7</td>
+           <td>100.00</td>
+           <td>7</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000286</td>
+           <td>CLINICA ALEMANA DE V/76555870</td>
+           <td>12/09/2012</td>
+           <td>15/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>1</td>
+           <td>1</td>
+           <td>100.00</td>
+           <td>1</td>
+           <td>100.00</td>
+           <td>1</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000287</td>
+           <td>FUNDACION DE SALUD E/70905700</td>
+           <td>13/09/2012</td>
+           <td>25/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000288</td>
+           <td>CLINICA ALEMANA DE V/76555870</td>
+           <td>14/09/2012</td>
+           <td>02/10/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000289</td>
+           <td>CLINICA ALEMANA DE V/76555870</td>
+           <td>14/09/2012</td>
+           <td>09/10/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>16</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td>16</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000290</td>
+           <td>VIDA CELL S.A./99578600</td>
+           <td>21/09/2012</td>
+           <td>04/10/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>25</td>
+           <td>25</td>
+           <td>100.00</td>
+           <td>25</td>
+           <td>100.00</td>
+           <td>25</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000291</td>
+           <td>CLINICA LAS LILAS/99567970</td>
+           <td>24/09/2012</td>
+           <td>01/10/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>6</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td>6</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000292</td>
+           <td>POLICIA DE INVESTIGA/60506000</td>
+           <td>24/09/2012</td>
+           <td>03/10/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>14</td>
+           <td>14</td>
+           <td>100.00</td>
+           <td>14</td>
+           <td>100.00</td>
+           <td>14</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000294</td>
+           <td>CENTRO DE IMAGENES M/77495150</td>
+           <td>25/09/2012</td>
+           <td>25/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>4</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000295</td>
+           <td>SERVICIOS ODONTOLOGI/79611460</td>
+           <td>25/09/2012</td>
+           <td>25/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>4</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td>4</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000297</td>
+           <td>SEREMI DE SALUD/61601000</td>
+           <td>25/09/2012</td>
+           <td>27/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>21</td>
+           <td>21</td>
+           <td>100.00</td>
+           <td>21</td>
+           <td>100.00</td>
+           <td>21</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000300</td>
+           <td>CLINICA DE ESP. Y LA/86948000</td>
+           <td>27/09/2012</td>
+           <td>02/10/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>9</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td>9</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000302</td>
+           <td>MAKEUP EXPRESS/76058032</td>
+           <td>29/09/2012</td>
+           <td>29/09/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>12</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td>12</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000303</td>
+           <td>CLINICA ALEMANA DE V/76555870</td>
+           <td>01/10/2012</td>
+           <td>09/10/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>66</td>
+           <td>66</td>
+           <td>100.00</td>
+           <td>66</td>
+           <td>100.00</td>
+           <td>66</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000305</td>
+           <td>CLINICA LOS COIHUES/96921660</td>
+           <td>04/10/2012</td>
+           <td>04/10/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>5</td>
+           <td>5</td>
+           <td>100.00</td>
+           <td>5</td>
+           <td>100.00</td>
+           <td>5</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+               <tr>
+           <td>Mayorista</td>
+           <td>Ventas</td>
+           <td>000306</td>
+           <td>CLINICA LOS COIHUES/96921660</td>
+           <td>04/10/2012</td>
+           <td>04/10/2012</td>
+           <td>CICLO CERRADO </td>
+           <td>CICLO CERRADO </td>
+           <td>rojo</td>
+           <td>1</td>
+           <td>1</td>
+           <td>100.00</td>
+           <td>1</td>
+           <td>100.00</td>
+           <td>1</td>
+           <td>100.00</td>
+           <td><a href='#'><img src='http://localhost/vestmedmvc/system/icons/application_view_columns.png' alt='' title='' /></a></td>
+       </tr>
+             
+    </tbody>
+</table>
+</body>
+</html>

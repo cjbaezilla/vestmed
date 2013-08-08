@@ -1,0 +1,23 @@
+.tabla-tallas{
+	width:100%;
+	font-family:Verdana, Geneva, sans-serif;
+	margin-bottom:10px;
+	font-size:11px;
+	border:1px solid #dddddd;
+	background:#fff;
+	
+}
+.tabla-tallas td{
+	border:1px solid #dddddd;
+}
+.tabla-tallas caption{
+	text-align:center;
+	font-weight:bold;
+	background:#e2e2e2;
+	margin-top:10px;
+}
+.logo{
+	text-align:right;
+	border-bottom:2px solid #417976;
+	padding-bottom:3px;
+}

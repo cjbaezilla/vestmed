@@ -1,0 +1,109 @@
+<html>
+<head>
+<title> Barra de Menu </title>
+<!-- Please see http://www.brainjar.com for terms of use. -->
+<link href="css/menumlb.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="include/menumlb.js"></script>
+</head>
+<body>
+
+<!-- Menu bar. -->
+<div class="menuBar" style="width:80%;">
+<a class="menuButton" href="" onclick="return buttonClick(event, 'fileMenu');" onmouseover="buttonMouseover(event, 'fileMenu');">File</a>
+<a class="menuButton" href="" onclick="return buttonClick(event, 'editMenu');" onmouseover="buttonMouseover(event, 'editMenu');">Edit</a>
+<a class="menuButton" href="" onclick="return buttonClick(event, 'viewMenu');" onmouseover="buttonMouseover(event, 'viewMenu');">View</a>
+<a class="menuButton" href="" onclick="return buttonClick(event, 'toolsMenu');" onmouseover="buttonMouseover(event, 'toolsMenu');">Tools</a>
+<a class="menuButton" href="" onclick="return buttonClick(event, 'optionsMenu');" onmouseover="buttonMouseover(event, 'optionsMenu');">Options</a>
+<a class="menuButton" href="" onclick="return buttonClick(event, 'helpMenu');" onmouseover="buttonMouseover(event, 'helpMenu');">Help</a>
+</div>
+<!-- Main menus. -->
+<div id="fileMenu" class="menu" onmouseover="menuMouseover(event)">
+<a class="menuItem" href="blank.html">File Menu Item 1</a>
+<a class="menuItem" href="" onclick="return false;" onmouseover="menuItemMouseover(event, 'fileMenu2');"
+><span class="menuItemText">File Menu Item 2</span><span class="menuItemArrow">?</span></a>
+<a class="menuItem" href="blank.html">File Menu Item 3</a>
+<a class="menuItem" href="blank.html">File Menu Item 4</a>
+<a class="menuItem" href="blank.html">File Menu Item 5</a>
+<div class="menuItemSep"></div>
+<a class="menuItem" href="blank.html">File Menu Item 6</a>
+</div>
+<div id="editMenu" class="menu" onmouseover="menuMouseover(event)">
+<a class="menuItem" href="blank.html">Edit Menu Item 1</a>
+<div class="menuItemSep"></div>
+<a class="menuItem" href="blank.html">Edit Menu Item 2</a>
+<a class="menuItem" href="" onclick="return false;" onmouseover="menuItemMouseover(event, 'editMenu3');"
+><span class="menuItemText">Edit Menu Item 3</span><span class="menuItemArrow">?</span></a>
+<a class="menuItem" href="blank.html">Edit Menu Item 4</a>
+<div class="menuItemSep"></div>
+<a class="menuItem" href="blank.html">Edit Menu Item 5</a>
+</div>
+<div id="viewMenu" class="menu">
+<a class="menuItem" href="blank.html">View Menu Item 1</a>
+<a class="menuItem" href="blank.html">View Menu Item 2</a>
+<a class="menuItem" href="blank.html">View Menu Item 3</a>
+</div>
+<div id="toolsMenu" class="menu" onmouseover="menuMouseover(event)">
+<a class="menuItem" href="" onclick="return false;" onmouseover="menuItemMouseover(event, 'toolsMenu1');"
+><span class="menuItemText">Tools Menu Item 1</span><span class="menuItemArrow">?</span></a>
+<a class="menuItem" href="blank.html">Tools Menu Item 2</a>
+<a class="menuItem" href="blank.html">Tools Menu Item 3</a>
+<div class="menuItemSep"></div>
+<a class="menuItem" href="" onclick="return false;" onmouseover="menuItemMouseover(event, 'toolsMenu4');"
+><span class="menuItemText">Tools Menu Item 4</span><span class="menuItemArrow">?</span></a>
+<a class="menuItem" href="blank.html">Tools Menu Item 5</a>
+</div>
+<div id="optionsMenu" class="menu">
+<a class="menuItem" href="blank.html">Options Menu Item 1</a>
+<a class="menuItem" href="blank.html">Options Menu Item 2</a>
+<a class="menuItem" href="blank.html">Options Menu Item 3</a>
+</div>
+<div id="helpMenu" class="menu">
+<a class="menuItem" href="blank.html">Help Menu Item 1</a>
+<a class="menuItem" href="blank.html">Help Menu Item 2</a>
+<div class="menuItemSep"></div>
+<a class="menuItem" href="blank.html">Help Menu Item 3</a>
+</div>
+<!-- File sub menus. -->
+<div id="fileMenu2" class="menu">
+<a class="menuItem" href="blank.html">File Menu 2 Item 1</a>
+<a class="menuItem" href="blank.html">File Menu 2 Item 2</a>
+</div>
+<!-- Edit sub menus. -->
+<div id="editMenu3" class="menu" onmouseover="menuMouseover(event)">
+<a class="menuItem" href="blank.html">Edit Menu 3 Item 1</a>
+<a class="menuItem" href="blank.html">Edit Menu 3 Item 2</a>
+<div class="menuItemSep"></div>
+<a class="menuItem" href="" onclick="return false;" onmouseover="menuItemMouseover(event, 'editMenu3_3');"
+><span class="menuItemText">Edit Menu 3 Item 3</span><span class="menuItemArrow">?</span></a>
+<a class="menuItem" href="blank.html">Edit Menu 3 Item 4</a>
+</div>
+<div id="editMenu3_3" class="menu">
+<a class="menuItem" href="blank.html">Edit Menu 3-3 Item 1</a>
+<a class="menuItem" href="blank.html">Edit Menu 3-3 Item 2</a>
+<a class="menuItem" href="blank.html">Edit Menu 3-3 Item 3</a>
+<div class="menuItemSep"></div>
+<a class="menuItem" href="blank.html">Edit Menu 3-3 Item 4</a>
+</div>
+<!-- Tools sub menus. -->
+<div id="toolsMenu1" class="menu">
+<a class="menuItem" href="blank.html">Tools Menu 1 Item 1</a>
+<a class="menuItem" href="blank.html">Tools Menu 1 Item 2</a>
+<div class="menuItemSep"></div>
+<a class="menuItem" href="blank.html">Tools Menu 1 Item 3</a>
+<a class="menuItem" href="blank.html">Tools Menu 1 Item 4</a>
+<div class="menuItemSep"></div>
+<a class="menuItem" href="blank.html">Tools Menu 1 Item 5</a>
+</div>
+<div id="toolsMenu4" class="menu" onmouseover="menuMouseover(event)">
+<a class="menuItem" href="blank.html">Tools Menu 4 Item 1</a>
+<a class="menuItem" href="blank.html">Tools Menu 4 Item 2</a>
+<a class="menuItem" href="blank.html" onclick="return false;" onmouseover="menuItemMouseover(event, 'toolsMenu4_3');"><span class="menuItemText">Tools Menu 4 Item 3</span><span class="menuItemArrow">?</span></a>
+</div>
+<div id="toolsMenu4_3" class="menu">
+<a class="menuItem" href="blank.html">Tools Menu 4-3 Item 1</a>
+<a class="menuItem" href="blank.html">Tools Menu 4-3 Item 2</a>
+<a class="menuItem" href="blank.html">Tools Menu 4-3 Item 3</a>
+<a class="menuItem" href="blank.html">Tools Menu 4-3 Item 4</a>
+</div>
+</body>
+</html>

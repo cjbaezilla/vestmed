@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Contacto - Vestmed Vestuario Médico</title>
+<link href="css/layout.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/mootools-1.2.1-core-yc.js"></script>
+<script type="text/javascript" src="js/mootools-1.2-more.js"></script>
+<script type="text/javascript" src="dropdown/js/dropdown.js"> </script>
+<script type="text/javascript" src="lytebox/lytebox.js"></script>
+<link rel="stylesheet" type="text/css" href="lytebox/lytebox.css" media="screen" /><link rel="stylesheet" type="text/css" media="screen" href="dropdown/css/uvumi-dropdown.css" />
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" media="screen" href="dropdown/css/uvumi-dropdown-ie.css" />
+<![endif]-->
+<script language="JavaScript" src="Include/ValidarDataInput.js"></script>
+<script language="JavaScript" src="Include/SoloNumeros.js"></script>
+<script language="JavaScript" src="Include/validarRut.js"></script>
+
+<script type="text/javascript">
+	new UvumiDropdown('dropdown-scliente');
+</script>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript">
+	var $j = jQuery.noConflict();
+    $j(document).ready
+	(
+		//$j(":input:first").focus();
+		
+		function()
+		{
+	        $j("form#searchPer").submit(function(){
+				$j.post("ajax-search-per.php",{
+					search_type: "per",
+					param_filter: $j("#rut").val()
+				}, function(xml) {
+					listLinPer(xml);
+				});return false;
+		    });
+	        //NO SUBMIT TODAVIA $j("form#patternlist-form").submit();
+	    }
+	);
+	
+    function filterPer(obj)
+    {
+        //$j("#codcmn").val(obj.value);
+		if (obj.value != "") {
+			if (validarRutCompleto('rut')) $j("form#searchPer").submit();
+			else {
+			  alert("Rut invalido. Intente nuevamente");
+			  $('rut').focus();
+			}
+		}
+    }
+	
+    function listLinPer(xml)
+    {
+        $j("filter",xml).each(
+			function(id) {
+	            filter=$j("filter",xml).get(id);
+	            if ($j("code",filter).text() == "rut") $j("#dfrut").val($j("value",filter).text());
+	            if ($j("code",filter).text() == "rutfmt") $j("#rut").val($j("value",filter).text());
+	            if ($j("code",filter).text() == "nombre") $j("#nombre").val($j("value",filter).text());
+				if ($j("code",filter).text() == "sexo") f1.sexoIn[parseInt($j("value",filter).text())-1].checked = true;
+	        }
+		);
+    }
+</script>
+</head>
+<body>
+<div id="body">
+	<div id="header"></div>
+    <div class="menu" id="menu-contacto">
+    	<a id="home" href="index.html">home</a>
+    	<a id="empresa" href="empresa.htm">empresa</a>
+        <a id="marcas" href="marcas.htm">marcas</a>
+        <a id="telas" href="telas.htm">telas</a>
+        <a id="bordados" href="bordados.htm">bordados</a>
+        <a id="despachos" href="despachos.htm">despachos</a>
+        <a id="clientes" href="clientes.htm">clientes</a>
+        <div id="servicio-cliente-selected" style="z-index:1000;padding-top:0px;" class="selected">
+        <ul id="dropdown-scliente" class="dropdown">
+                <li>
+                    <a class="normal" href="servicio-cliente.htm">servicio al cliente</a>
+                    <ul>
+                       <li>
+                            <a href="faq.htm">Faq</a>
+                        </li>
+                        <li>
+                            <a href="como-tomar-medidas.htm">C&oacute;mo Tomar Medidas</a>
+                        </li>
+                        <li>
+                            <a href="despachos.htm">Despachos</a>
+                        </li>
+                        <li>
+                            <a href="clean-care.htm">Clean & Care</a>
+                        </li>
+                        <li>
+                            <a href="tracking-ordenes.htm">Tracking de &Oacute;rdenes</a>
+                        </li>
+                        
+                        <li>
+                            <a href="tracking-ordenes.htm">C&oacute;mo Tomar Medidas</a>
+                        </li>
+                        <li>
+                            <a href="politicas-privacidad.htm">Pol&iacute;ticas de Privacidad</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>		
+        </div>
+        <a id="catalogo" href="catalogo.php">catalogo</a>
+        <div id="contacto-selected" class="selected">contacto</div>
+   
+  	</div>
+    <div id="work">
+    	<div id="back-contacto">
+        	<div id="titulo-contacto"><img src="images/contacto/titulo-contacto.png"/></div>
+            <div id="subtitulo-contacto">
+            Son muy importantes sus comentarios para evaluar su mejor opción (Todos los campos deben ser llenados).
+            </div>
+            <ul id="ul-formulario">
+				<form ID="searchPer" method="post" name="searchPer" enctype="multipart/form-data" />
+                <li>
+                	<label>Rut personal</label><span class="wrap-input">
+					<input name="rut" id="rut" type="text" class="text-contacto" onblur="filterPer(this)" onKeyPress="javascript:return soloRUT(event)" /></span>
+					<input type="hidden" name="dfrut" id="dfrut" />
+                </li>
+            	<li>
+                	<label>Sexo</label><span class="wrap-tipo-cliente">
+					<input type="radio" name="sexo" id="sexoIn" value="1"> Mujer
+					<input type="radio" name="sexo" id="sexoIn" value="2"> Hombre</span>
+                </li>
+                <li>
+                	<label>Nombre Completo</label><span class="wrap-input">
+					<input name="nombre" id="nombre" type="text" class="text-contacto" /></span>
+                </li>
+                <li>
+                	<label>Institucion *</label><span class="wrap-input">
+					<input name="institucion" type="text" class="text-contacto" /></span>
+                </li>
+                <li>
+                	<label>Email</label><span class="wrap-input">
+					<input name="email" id="email" type="text" class="text-contacto" /></span>
+                </li>
+                <li>
+                	<label>Fono Contacto</label><span class="wrap-input">
+					<input name="fono" id="fono" type="text" class="text-contacto" /></span>
+                </li>
+                <li>
+                	<label>Tipo de Consulta</label>
+					<span>
+                    	<select class="select-contacto" name="tipcna">
+                        	<option value="1">Informaci&oacute;n del Producto</option>
+                        	<option value="2">Reclamos</option>
+                        	<option value="3">Contacto Comercial</option>
+                        	<option value="4">Solicitud de Catalogos</option>
+                        	<option value="5">Informaci&oacute;n de sus Ordenes</option>
+                        	<option value="6">Otro</option>
+                        </select>
+                    </span>
+                </li>
+                 <li class="li-comentarios">
+                	<label class="label-comentarios">Comentarios</label>
+					<span class="wrap-textarea">
+						<textarea name="comentarios" id="comentarios" class="textarea-contacto"></textarea>
+					</span>
+                </li>
+                 <li>
+                	<label>Adjuntar documento</label>
+					<span>
+						<input class="file-contacto" type="file" name="documento" id="documento" size="28" onchange="fichero.value = this.value"/>
+						<input type="hidden" name="fichero"/>
+					</span>
+                </li>
+                <li class="mensaje-bottom">
+                * Rellenar sólo si es cliente institucional
+                </li>
+                <li class="mensaje-bottom">
+                	<span style="TEXT-ALIGN: right">
+					<input class="btn-enviar" type="BUTTON" value=" Enviar " name="enviar" onClick="javascript:EnviarFormCttWeb()"/></span>
+                </li>
+				</form>
+            </ul>
+            <!--div id="tienda">Descargar <a target="_blank" href="mapa.php">AQUI</a> mapa de ubicación de la tienda</div-->
+			<div id="tienda">Direcci&oacute;n y mapa de ubicaci&oacute;n tienda: <a rev="width: 530px; height: 460px; border: 0 none; scrolling: auto;" title="" rel="lyteframe[mapa]" href="mapa.php">AQUI</a>.</div>
+        </div>
+    </div>
+    <div id="footer"></div>
+</div>
+<script language="javascript">
+	var f1;	
+	
+	f1 = document.searchPer;
+	
+	f1.rut.focus();
+</script>
+</body>
+</html>

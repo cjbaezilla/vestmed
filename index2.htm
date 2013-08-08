@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Catalogo - Vestmed Vestuario M&eacute;dico</title>
+<link href="css/layout.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/mootools-1.2.1-core-yc.js"></script>
+<script type="text/javascript" src="js/mootools-1.2-more.js"></script>
+<script type="text/javascript" src="dropdown/js/dropdown.js"> </script>
+<link rel="stylesheet" type="text/css" media="screen" href="dropdown/css/uvumi-dropdown.css" />
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" media="screen" href="dropdown/css/uvumi-dropdown-ie.css" />
+<![endif]-->
+<script type="text/javascript" src="Include/ValidarDataInput.js"></script>
+<script type="text/javascript" src="Include/SoloNumeros.js"></script>
+<script type="text/javascript" src="Include/validarRut.js"></script>
+<link href="Include/estilos.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript">
+    new UvumiDropdown('dropdown-scliente');
+    
+    var $j = jQuery.noConflict();
+    $j(document).ready(function(){
+        $j("form#consulta").submit(function(){
+            $j.post("ajax-search-per.php",{
+                    search_type: "usr",
+                    param_filter: $j("#IdUsr").val(),
+                    param_clave: $j("#PwdUsr").val()
+                }, function(xml) {
+                ValidarUser(xml);
+            });
+            return false;
+        });
+    });
+
+    function ValidarUser(xml) {
+        var estado = 0;
+        $j("filter",xml).each(
+            function(id) {
+                filter=$j("filter",xml).get(id);
+                estado = $j("estado",filter).text();
+            }
+        );
+        if (estado == 0) {
+            alert ('Usuario No existe');
+            return;
+        }
+        if (estado == 2) {
+            alert ('Clave incorrecta');
+            return;
+        }
+        else {
+            $j("permiso",xml).each(
+                function(id) {
+                    permiso=$j("permiso",xml).get(id);
+                    modulo = $j("modulo",permiso).text();
+                    opcion = $j("opcion",permiso).text();
+                    //alert(modulo + " - " + opcion);
+                    if (parseInt(modulo) == 1 && parseInt(opcion) == 1) estado = 99;
+                }
+            );
+            if (estado != 99) {
+                alert ('Usuario sin permiso para acceder al M\u00f3dulo de Cotizaci\u00f3n');
+                return;
+            }
+        }
+        $j("#usuario").val($j("#IdUsr").val());
+        $j("form#seguridad").submit();                
+    }
+
+    function CheckData() {
+        var form = document.getElementById('consulta');
+        if (form.IdUsr.value == "" || form.PwdUsr.value == "") {
+            alert ('Favor ingrese su Usuario y Clave');
+            form.IdUsr.focus();
+            return false;
+        }
+        $j("form#consulta").submit();                
+    }
+</script>
+
+</head>
+
+<body>
+<div id="body">
+    <div id="header"></div>
+    <ul id="usuario_registro">
+    <form ID="consulta" AUTOCOMPLETE="off" method="POST" name="consulta">
+        <li class="back-verde"><a href="index.php">VESTMED</a></li>
+        <li class="back-verde"><a href="javascript:CheckData()">ENTRAR</a></li>
+        <li class="back-verde inputp"><input type="password" id="PwdUsr" name="PwdUsr" tabIndex="2"/></li>
+        <li class="back-verde">CONTRASE&Ntilde;A</li>
+        <li class="back-verde inputp"><input type="" name="IdUsr" id="IdUsr" tabIndex="1"></li>
+        <li class="back-verde">USUARIO</li>
+    </form>
+    </ul>
+    <div id="work">
+    	<div id="back-home">
+            <form id="seguridad" name="seguridad" method="POST" action="cotizador/mivestmed.php">
+                    <input type="hidden" name="usuario" id="usuario" />
+            </form>
+        </div>
+    </div>
+    <div id="footer"></div>
+</div>
+<script language="javascript">
+    var IdUsr = document.getElementById('IdUsr');
+    IdUsr.focus();
+</script>
+</body>
+</html>

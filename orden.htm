@@ -1,0 +1,244 @@
+<font color="#ff0000"></font><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Registro - Vestmed Vestuario Mdico</title>
+<link href="css/layout.css" type="text/css" rel="stylesheet" />
+<link href="css/clearfix.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/mootools-1.2.1-core-yc.js"></script>
+<script type="text/javascript" src="js/mootools-1.2-more.js"></script>
+<script type="text/javascript" src="dropdown/js/dropdown.js"> </script>
+<link rel="stylesheet" type="text/css" media="screen" href="dropdown/css/uvumi-dropdown.css" />
+
+<LINK href="Include/estilos.css" type=text/css rel=stylesheet>
+<script language="JavaScript" src="Include/SoloNumeros.js"></script>
+<script language="JavaScript" src="Include/ValidarDataInput.js"></script>
+<script language="JavaScript" src="Include/validarRut.js"></script>
+<script language="JavaScript" src="Include/fngenerales.js"></script>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" media="screen" href="dropdown/css/uvumi-dropdown-ie.css" />
+<![endif]-->
+<script type="text/javascript">
+new UvumiDropdown('dropdown-scliente');
+
+function popwindow(ventana){
+   window.open(ventana,"Anexos",'toolbar=0,location=0,scrollbars=yes,resizable=1,left=60,top=40,width=640,height=480')
+}
+</script>
+</head>
+
+<body>
+<div id="body">
+	<div id="header"></div>
+    <div class="menu" id="menu-noselect">
+    	<a id="home" href="index.htm">home</a>
+    	<a id="empresa" href="empresa.htm">empresa</a>
+        <a id="marcas" href="marcas.htm">marcas</a>
+        <a id="telas" href="telas.htm">telas</a>
+        <a id="bordados" href="bordados.htm">bordados</a>
+        <a id="despachos" href="despachos.htm">despachos</a>
+        <a id="clientes" href="clientes.htm">clientes</a>
+         <div id="servicio-cliente-selected" style="z-index:1000;padding-top:0px;" class="selected">
+        <ul id="dropdown-scliente" class="dropdown">
+                <li>
+                    <a class="normal" href="servicio-cliente.htm">servicio al cliente</a>
+                    <ul>
+                       <li>
+                            <a href="faq.htm">Faq</a>
+                        </li>
+                        <li>
+                            <a href="como-tomar-medidas.htm">Cmo Tomar Medidas</a>
+                        </li>
+                        <li>
+                            <a href="despachos.htm">Despachos</a>
+                        </li>
+                        <li>
+                            <a href="clean-care.htm">Clean & Care</a>
+                        </li>
+                        <li>
+                            <a href="tracking-ordenes.htm">Tracking de rdenes</a>
+                        </li>
+                        <li>
+                            <a href="como-cotizar.htm">Cmo Cotizar</a>
+                        </li>
+                       
+                        <li>
+                            <a href="politicas-privacidad.htm">Polticas de Privacidad</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>		
+        </div>
+        <a id="catalogo" href="catalogo.php">catalogo</a>
+        <a id="contacto" href="contacto.htm">contacto</a>
+  
+</div>
+<ul id="usuario_registro">
+<form ID="F1" AUTOCOMPLETE="off" method="POST" name="F1">
+ 	<li class="back-verde registro"><a href="registrarse.php">REGISTRARSE</a></li>
+     <li class="olvido"><a href="javascript:EnviarClave()">OLVID SU CLAVE?</a></li>
+     <li class="back-verde"><a href="javascript:ValidarLogin()">ENTRAR</a></li>
+     <li class="back-verde inputp"><input type="password" name="dfclave"/></li>
+     <li class="back-verde">CONTRASEA</li>
+     <li class="back-verde inputp"><input type="" name="rut" id="rut" onblur="formatearRut('rut','dfrut')"></li>
+     <li class="back-verde">RUT</li>
+     <input type="hidden" name="dfrut" id="dfrut" />
+</form>
+</ul>
+    <div id="work">
+    	<div id="back-registro4">
+		<table border="0" width="100%" CELLSPACING="0" CELLPADDING="1">
+			<tr>
+				<td align="right" style="padding-right: 10px"><a href="#">Vista Resumen</a> | <a href="#">Vista Detallada</a></td>
+			</tr>
+			<tr>
+				<td valign="top" style="padding-right: 10px; padding-left: 10px">
+				<table border="0" width="100%" CELLSPACING="0" CELLPADDING="1" >
+			  	<tr>
+			  		<td width="280px">
+						<table border="0" width="100%" CELLSPACING="0" CELLPADDING="1">
+					   	<tr>
+					   		<td><h3>Diciembre 29, 2010</h3></td>
+					   	</tr>
+					   	<tr>
+					   		<td><font color="#0066ff">Origen:</font> Web</td>
+					   	</tr>
+					   	<tr>
+					   		<td><font color="#0066ff">Vendedor:</font> Victoria Cofre</td>
+					   	</tr>
+					   	<tr>
+					   		<td><font color="#0066ff">Order #:</font> <font color="#ff0000">112233</font></td>
+					   	</tr>
+					   	<tr>
+					   		<td style="padding-top: 30px"><b>Información de Cliente</b></td>
+					   	</tr>
+					   	<tr>
+					   		<td><hr color="#c0c0c0"></td>
+					   	</tr>
+					   	<tr>
+					   		<td><font color="#a9a9a9" size="2">Cliente:</font></td>
+					   	</tr>
+					   	<tr>
+					   		<td style="padding-left: 70px"><b><font size="2">Maurio Thibaut</font></b></td>
+					   	</tr>
+					   	<tr>
+					   		<td style="padding-top: 30px"><font color="#a9a9a9" size="2">Dirección de Facturación:</font>&nbsp;&nbsp;(<a href="#" title="Modifica direccion de facturacion">Modificar</a>)</td>
+					   	</tr>
+					   	<tr>
+					   		<td style="padding-left: 70px"><b><font size="2">Casa Matriz</font></b></td>
+					   	</tr>
+					   	<tr>
+					   		<td style="padding-left: 70px"><font size="2">Las Bordales 761</font></td>
+					   	</tr>
+					   	<tr>
+					   		<td style="padding-left: 70px"><font size="2">Vitacura</font></td>
+					   	</tr>
+					   	<tr>
+					   		<td style="padding-left: 70px"><font size="2">Santiago</font></td>
+					   	</tr>
+					   	<tr>
+					   		<td style="padding-top: 30px"><b>Mensajes</b></td>
+					   	</tr>
+					   	<tr>
+					   		<td><hr color="#c0c0c0"></td>
+					   	</tr>
+					   	<tr>
+					   		<td><font color="#a9a9a9" size="2">Mensajes:</font></td>
+					   	</tr>
+					   	<tr>
+					   		<td style="padding-left: 70px"><font size="2"><b>Ver Historial</b> (17 / 1 Nuevo)</font></td>
+					   	</tr>
+					   	<tr>
+					   		<td style="padding-left: 70px"><font size="2">Redactar Nuevo</font></td>
+					   	</tr>
+					   	<tr>
+					   		<td style="padding-top: 30px"><b>Método de Entrega</b></td>
+					   	</tr>
+					   	<tr>
+					   		<td><hr color="#c0c0c0"></td>
+					   	</tr>
+					   	<tr>
+					   		<td><font color="#a9a9a9" size="2">Método:</font>&nbsp;&nbsp;(<a href="#" title="Modifica metodo de entrega">Modificar</a>)</td>
+					   	</tr>
+					   	<tr>
+					   		<td style="padding-left: 70px"><font size="2"><b>Despacho</b></font></td>
+					   	</tr>
+					   	<tr>
+					   		<td style="padding-left: 70px"><font size="2">Carrier: Chile Express</font></td>
+					   	</tr>
+					   	<tr>
+					   		<td style="padding-left: 70px"><font size="2">Servicio: Overnight</font></td>
+					   	</tr>
+					   	<tr>
+					   		<td style="padding-top: 30px"><font color="#a9a9a9" size="2">Direccion de Despacho:</font>&nbsp;&nbsp;(<a href="#" title="Modifica metodo de entrega">Modificar</a>)</td>
+					   	</tr>
+					   	<tr>
+					   		<td style="padding-left: 70px"><font size="2"><b>Casa Matriz</b></font></td>
+					   	</tr>
+					   	<tr>
+					   		<td style="padding-left: 70px"><font size="2">Las Bordales 761</font></td>
+					   	</tr>
+					   	<tr>
+					   		<td style="padding-left: 70px"><font size="2">Vitacura</font></td>
+					   	</tr>
+					   	<tr>
+					   		<td style="padding-left: 70px"><font size="2">Santiago</font></td>
+					   	</tr>
+					   	<tr>
+					   		<td style="padding-top: 30px"><b>Forma de Pago</b></td>
+					   	</tr>
+					   	<tr>
+					   		<td><hr color="#c0c0c0"></td>
+					   	</tr>
+					   	<tr>
+					   		<td><font color="#a9a9a9" size="2">Total Orden:</font> <b>$70.204</b> (<a href="#">Ver Pago</a> | <a href="#">Pago</a>)</td>
+					   	</tr>
+					   </table>
+					</td>
+					<td width="1px" style="padding-left: 5px; border-right: #c0c0c0 1px solid;"><BR></td>
+			  		<td valign="top" style="padding-left: 10px">
+					<table border="0" width="100%" CELLSPACING="0" CELLPADDING="1">
+			     	<tr>
+			     		<td><hr size="2px" color="#c0c0c0" /></td>
+			     	</tr>
+			     	<tr>
+			     		<td><font size="+1">Estado Global: <b>En Proceso</b></font></td>
+			     	</tr>
+			     	<tr>
+			     		<td><font size="+1" color="#a9a9a9">% Global Avance:</font> <font size="+1" color="#808080">70%</font></td>
+			     	</tr>
+			     	<tr>
+			     		<td><font size="2" color="#c0c0c0">Despacho Estimado</font>: <font size="2" color="#808080">Enero 10, 2010</font></td>
+			     	</tr>
+			     	<tr>
+			     		<td><font size="2" color="#c0c0c0">Cantidad Despachada</font>: <font size="2" color="#808080">0 de 10</font></td>
+			     	</tr>
+					<tr>
+						<td style="padding-top: 10px"><font size="2">Acciones: <a href="#">Pagar</a>, <a href="#">Mensajes</a>, <a href="#">Despachos</a>, <a href="#">Devoluciones</a>, <a href="#">LOG</a>, <a href="#">Imprimir</a></font></td>
+					</tr>
+			     	<tr>
+			     		<td><hr size="2px" color="#c0c0c0" /></td>
+			     	</tr>
+					<tr><td><font size="2"><b>Detalles de la Orden</b></font></td></tr>		
+					<tr><td>Total Styles: 2</td></tr>			
+					<tr><td>Total Unidades: 8</td></tr>			
+			        </table>
+					</td>
+			  	</tr>
+			    </table>
+		    	</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+	<div id="footer"></div>
+<script language="javascript">
+	var f1;	
+	var f2;
+	
+	f1 = document.F1;	
+	f2 = document.F2;
+</script>
+</body>
+</html>

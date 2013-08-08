@@ -1,0 +1,109 @@
+/*  
+JAVASCRIPT IMAGE GALLERY W/ mootools
+Description: STYLE SHEET FOR IMAGE GALLERY
+Version: 1.0
+Author: Devin Ross
+Author URI: http://tutorialdog.com
+*/
+
+body{ background:white; color:white; margin:0; padding:0; border:0 none;}
+#img_gallery{ margin:20px auto 2px;
+text-align:center;
+width:595px; }
+#img_gallery a{ outline:none; border:none; }
+#img_gallery a img{border:none;}
+
+/* --- IMAGE STAGE */
+#fullimg{
+/*
+    height:380px;
+    width:500px;
+*/
+margin:0 auto;
+overflow:hidden;
+
+}
+#fullimg img{ /* width:500px; */ }
+#fullimg p, #fullimg span{
+	color:black;
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:11px;
+margin:0;
+color:#85CED7;
+padding:2px;
+position:absolute;
+top:0;
+/* width:500px; */
+}
+#fullimg p{
+font-weight:bold;
+margin-left:-49px;
+text-align:left;
+
+}
+/* --- SLIDER --- */
+#img_gallery #wrapper{
+	overflow:hidden;
+	padding:4px 2px 2px 0;
+	width: 460px;
+	float:left;
+	height:60px;
+	margin-top:20px;
+	/*background-color:#181818;*/
+	position: relative;
+
+}
+
+#items{
+	margin:0px 0px;
+	padding:0px;
+	list-style:none;
+	width:50000px;
+	position: relative;
+	letter-spacing:0em;
+}
+#items li{
+	float:left;
+	list-style:none;
+	margin-right:2px;
+}
+#items .thumb{
+	width:65px;
+	height:60px;
+	cursor:pointer;
+	margin:0px;
+	padding:0px;
+	border:1px solid #666;
+}
+#items .large{
+	display:none;
+	position:absolute;
+}
+#fullimg .loading{
+	width: 24px;
+	height: 24px;
+}
+#fullimg .thumb{display:none;}
+
+#items .item  p, #items .item  span{
+	display:none;
+	text-indent: -2000em;
+}
+#moveleft, #moveright{
+	margin:0px;
+	height:58px;
+	color: white;
+	width: 16px;
+	text-indent: -2000em;
+	text-decoration: none;
+	z-index: 1000; 
+	display:block;
+	cursor: pointer;
+	float:left;
+}
+#moveleft{background: url('images/left.gif');}
+#moveright{background: url('images/right.gif');}
+#moveleft:hover, #moveright:hover{ background-position:bottom; }
+#img_titulo{
+	font-weight:bold;
+}

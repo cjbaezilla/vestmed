@@ -1,0 +1,152 @@
+.titulo-prods{
+height:25px; line-height:25px; background:url(http://www.vestmed.cl/images/catalogo1/back1.gif); margin:5px 0 0 0; padding:0 0 0 10px; width:146px; color:#033939; font-size:10px;
+}
+.listado-prods{
+margin: 0;
+padding: 0;
+list-style: none;
+width:156px;
+}
+.listado-prods li{
+border-bottom: 1px solid #e5e5e5;
+color: #023a3b;
+font-size: 10px;
+height:18px;
+line-height: 18px;
+padding-left: 5px;
+text-decoration: none;
+}
+.listado-prods a{
+cursor: pointer;
+color: #023a3b;
+font-size: 10px;
+height:18px;
+line-height: 18px;
+padding-left: 5px;
+text-decoration: none;
+}
+.listado-prods a:hover{
+text-decoration: underline;
+}
+.productos-res{
+margin: 0;
+padding: 0;
+list-style: none;
+}
+.productos-res li{
+width:141px;
+height: 187px;
+border: 1px solid #e0e0e0;
+padding:2px;
+float: left;
+margin: 2px;
+}
+.productos-res li .imagen{
+width:140px;
+height: 153px;
+margin-bottom: 2px;
+overflow: hidden;
+}
+.productos-res li .prodb{
+height: 29px;
+background: url(http://www.vestmed.cl/images/catalogo1/back2.gif);
+}
+.productos-res li .prodb p{
+margin: 0;
+padding: 2px;
+float: left;
+width: 90px;
+line-height: 12px;
+overflow:hidden;
+height: 23px;
+display:block;
+}
+.productos-res li .prodb a{
+float: right;
+margin-right:2px;
+margin-top:6px;
+}
+#top-titulo{
+height:34px; line-height:34px; color:#fff; background:url(http://www.vestmed.cl/images/catalogo1/top1.gif);
+padding-left: 10px;
+font-weight: bold;
+}
+#top-paginacion{
+height:34px;  color:#797979; 
+}
+#top-paginacion a{
+ color: #797979;
+ text-decoration: none;
+ cursor: pointer;
+}
+#top-paginacion a:hover{
+text-decoration: underline;
+}
+.text-search{
+display: block;
+width: 128px;
+height: 18px;
+line-height: 18px;
+border: 0;
+background: url(http://www.vestmed.cl/images/catalogo1/input.gif);
+float: left;
+padding-left: 20px;
+}
+.button-search{
+display: block;
+width: 57px;
+height: 18px;
+line-height: 18px;
+border: 0;
+float: left;
+background: url(http://www.vestmed.cl/images/catalogo1/buscar.gif);
+margin-left: 10px;
+}
+.barra-sup a{
+color: #fff;
+text-decoration: none;
+}
+.barra-sup a:hover{
+text-decoration: underline;
+}
+.adv-search{
+margin:0; padding:0; height:20px; line-height:20px; color:#003a3c; font-size:12px; border-bottom:1px solid #e9e9e9; display:block;
+text-decoration: none;
+cursor: pointer;
+font-weight: bold;
+}
+.adv-search a:hover{
+text-decoration: underline;
+}
+.quitar{
+background: url(http://www.vestmed.cl/images/catalogo1/quitar.gif);
+cursor: pointer;
+width: 150px;
+height: 16px;
+color: #50504e;
+font-size: 10px;
+font-weight: bold;
+padding-left: 4px;
+margin: 2px 0;
+}
+.listado-prods .last{
+border-bottom: none!important;
+}
+#pagination{
+float:left;
+margin: 9px 0 0 0;
+padding: 0;
+list-style: none;
+}
+#pagination li{
+float: left;
+width: 20px;
+text-align: center;
+height: 16px;
+}
+#pagination li+li{
+border-left: 1px solid #797979;
+}
+#pagination li a{
+line-height: normal!important;
+}
